@@ -1,0 +1,37 @@
+# Local datasets, weights and execution artifacts
+/datasets/
+/checkpoints/
+/runs/
+/reviews/
+/transfer/
+*.pt
+*.pth
+*.safetensors
+*.parquet
+*.tar
+*.tar.gz
+*.zip
+*.before*
+
+# Python environments and generated caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Local editor, OS and credential files
+.DS_Store
+._*
+.vscode/
+.idea/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# The old deployment-bundle manifest is historical, not a current integrity record
+/transfer_manifest.json

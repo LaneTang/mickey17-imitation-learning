@@ -1,0 +1,25 @@
+Generated with the built-in image-generation tool. Current zero-offset deployment; illustrative timeline.
+
+Initial prompt:
+Use case: infographic-diagram.
+Create a polished, technically accurate English system architecture IMAGE for a robotics GitHub README, landscape approximately 16:9, high resolution with large readable text. Title: "Mickey17 · Real-time ACT deployment". Subtitle: "Asynchronous policy inference + cycle-aligned action scheduling". Light ivory/white background, restrained navy text, teal for inference, blue for scheduling, amber for controller, elegant consistent rounded rectangles, thin precise arrows, generous whitespace, no decorative stock art, no watermark. Technical diagram, not a poster full of paragraphs. Real-time here is a nominal control loop, not a hard-real-time guarantee.
+Represent the CURRENT zero-offset deployment, not RTC, not hybrid, not training. Main structure is a closed loop in a clean serpentine layout:
+TOP ROW, LEFT TO RIGHT:
+1. "Live observation" with sublabels "Wrist RGB · 640 × 480" and "Measured robot state".
+2. "Preprocess" sublabel "Image + state normalization".
+3. "ACT inference" sublabels "Background CPU worker" and "≈320 ms per prediction".
+4. "Postprocess" sublabels "Denormalize joint targets" and "Keep 6 arm/gripper outputs".
+5. "Overlap action queue" sublabels "30 actions per chunk" and "Align by target control cycle" and "Discard expired actions · blend overlap".
+Connect all five top boxes with rightward arrows. Group boxes 2 through 4 inside a clearly labeled subtle tinted boundary "Asynchronous inference worker". Add near the observation-to-preprocess arrow: "Copy latest observation · replan interval ≥0.4 s". The observation itself and action queue are OUTSIDE the worker group.
+BOTTOM ROW, RIGHT TO LEFT directly below top row:
+6. under the queue at far right, "Select current target" sublabel "Pop one queued action".
+7. to its left "Raw proposal checks" sublabel "Finite values · data envelope · target gap".
+8. to its left "Arm target filter" sublabels "fₜ = α pₜ + (1 − α) fₜ₋₁" and "Five arm joints · gripper unfiltered".
+9. to its left "Step checks + bounds" sublabels "Check filtered step" and "Limit rate · target lead · data range".
+10. at far left "Robot execution" sublabels "Absolute arm/gripper targets" and "Base velocities = 0".
+Arrow down from queue to select current target, then clear LEFTWARD arrows through 7,8,9,10. Group bottom boxes 6-9 in a controller boundary label "Control loop · nominal 30 Hz (33.3 ms/cycle)". There is a feedback arrow from robot execution back UP to live observation labeled "New image + measured state". Add thin auxiliary feedback from measured state toward checks/bounds if it fits without crossing text; omit if cluttered.
+Small callout next to queue: "First inference: hold start pose". Small caption below controller: "Guard violations or queue exhaustion → stop". The step and bounds block is software empirical checks, do NOT imply certified safety or collision avoidance.
+At bottom create a narrow two-track schematic TIMELINE with heading "Compute while the robot keeps moving". Label upper track "Inference worker"; show separated teal blocks "Chunk A", "Chunk B", "Chunk C" of roughly .32 s, starting roughly .4 s apart. Label lower track "Control + execution"; show continuous blue small ticks including an initial gray "Hold" interval before first chunk arrives. Under timeline a concise note: "Scheduling maintains command flow; filtering smooths targets. Neither removes inference latency."
+Important content invariants: no connection from raw policy directly to robot; every sent action goes through queue and checks/filter/bounds. Queue and exponential filter are distinct operations. Filter previous value means previous filtered target, NOT current measured state. A nominal 30 Hz control loop is NOT 30 Hz fresh policy inference. Model has base outputs ignored, always zero commanded base velocity. No claims about offset12, hybrid or RTC. Preserve every requested label accurately; use proper arrows, uncluttered professional publication quality.
+
+Final refinement: Preserve architecture; correct the bottom timeline to shared time coordinates. Inference A: 0–0.32 s, B: 0.40–0.72 s, C: 0.80–1.12 s. Hold the initial pose from 0–0.32 s, then execute queued targets continuously at nominal 30 Hz. Label the 0.4-second start-to-start interval and mark actual latency as variable.

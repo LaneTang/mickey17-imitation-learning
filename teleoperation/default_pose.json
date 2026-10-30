@@ -1,0 +1,22 @@
+{
+  "format_version": 1,
+  "robot_id": "Mickey17_awesome_kiwi",
+  "captured_at_utc": "2026-10-10T19:03:57.566270+00:00",
+  "source": "observed follower positions during leader teleoperation",
+  "joint_order": [
+    "arm_shoulder_pan.pos",
+    "arm_shoulder_lift.pos",
+    "arm_elbow_flex.pos",
+    "arm_wrist_flex.pos",
+    "arm_wrist_roll.pos",
+    "arm_gripper.pos"
+  ],
+  "joint_positions": [
+    -0.22,
+    -95.297,
+    44.791,
+    93.363,
+    0.044,
+    1.354
+  ]
+}

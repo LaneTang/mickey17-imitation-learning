@@ -1,0 +1,53 @@
+# Shared settings for NEW training runs and NUC deployment.
+# Copy this file with the scripts to the NUC IL directory. A checkpoint keeps
+# its own trained model configuration; editing [train.*] never changes an
+# existing checkpoint. Runtime settings take effect only in scripts that read
+# this file. No setting starts training or enables robot motion by itself.
+format_version = 1
+
+[bc.model]
+# The current BC code/checkpoints use this image size and future offset.
+# Changing either requires coordinated model, review, and deployment changes.
+image_height = 120
+image_width = 160
+future_offset_frames = 3
+
+[bc.train]
+epochs = 3
+batch_size = 16
+learning_rate = 0.0003
+
+[act.train]
+# These values create a NEW ACT checkpoint; they do not modify act_004000.
+steps = 4000
+batch_size = 4
+chunk_size = 30
+n_action_steps = 10
+dim_model = 256
+n_heads = 4
+dim_feedforward = 1024
+n_encoder_layers = 2
+n_vae_encoder_layers = 2
+optimizer_lr = 0.0001
+optimizer_lr_backbone = 0.00001
+eval_steps = 250
+max_eval_samples = 128
+log_freq = 50
+save_freq = 500
+num_workers = 0
+
+[act.runtime]
+# Number of actions used from each predicted chunk. Must be <= the loaded
+# checkpoint's chunk_size. 12 actions at 30 Hz span 0.4 seconds.
+action_window = 12
+cpu_threads = 4
+
+[deployment]
+control_hz = 30.0
+preflight_start_tolerance = 7.0
+shadow_seconds = 20.0
+shadow_start_tolerance = 7.0
+shadow_leader_start_tolerance = 7.0
+shadow_max_tracking_gap = 30.0
+shadow_snapshot_every_s = 1.0
+bc_raw_start_tolerance = 3.0

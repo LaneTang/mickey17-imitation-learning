@@ -1,0 +1,41 @@
+{
+  "prepared_on": "2026-10-30",
+  "authority": "Downloaded NUC IL source snapshot",
+  "source_workspace_path": "Mickey17 remote/Code/IL",
+  "source_files_compared_before_packaging": 28,
+  "excluded_nuc_source_files": [
+    "deployment/rollout_act_overlap.py.before_arm_filter_20261025T021700Z",
+    "deployment/rollout_act_overlap.py.before_empirical",
+    "transfer_manifest.json"
+  ],
+  "mac_project_path": "lerobot/Atom's/Imitation Learning",
+  "mac_lerobot_commit": "c364df18c54b670b6450073039aa2cd6024a6855",
+  "nuc_lerobot_commit": null,
+  "nuc_files": {
+    "default_pose.json": "1e2483e6d8f65da609a836455e3c6fd8c627b8df9ff6892b6191567c925a971d",
+    "demo_collection/plot_episode_commands.py": "d41ca93ee42617ca582c8ee540f051d5ebb042c8267bbdf05426f04c1d8a1b1c",
+    "demo_collection/record_demo_wrist_cam.py": "dfad8cbff785f60d80df661b14137247bc77430d26cd097d0095817a86fd5beb",
+    "deployment/act_overlap_queue.py": "37ec552b70a7dcfeb4c25f06de3189c1d8ee333ce62003abe2ee93b088291340",
+    "deployment/empirical_limits_patch4_158.json": "4eaadb0718ed439356fc0e3cbfe3b54e0d5856b27a0294c5791b07f1be94d28a",
+    "deployment/policy_io.py": "163fc27dd058fcf386f6d39778cb2068d4fa64c37ec5dcb111a7cb7ebb2666a4",
+    "deployment/preflight.py": "9fbc1d7171ac8b85ff4264911bbc0b8e1095c9ceb8f6e6497993bca6975d230d",
+    "deployment/profile_act_cpu.py": "cad6e255bbb6db3ef252c5d6fbc4679d0369e5e261975a99652a855e00a4d98c",
+    "deployment/profile_act_live.py": "58d265e30241ddfc990aff7b49ce2eadc2e1e1c56ac073c57cf56347e966aa21",
+    "deployment/rollout_act.py": "76b5a7d943838074382381da7bebad6bcbb1d96dab7894e36c424997bd310204",
+    "deployment/rollout_act_overlap.py": "fba0da2d5e002d86f403cba9dea44bf28585d273d9d52ed6fc5dfdaa70e5944d",
+    "deployment/rollout_act_unbounded.py": "8af8bfbbdb028b09e3ff10ebae139cd975624d0f5b71c095bb7ac98a895760dd",
+    "deployment/rollout_bc.py": "3d139b4b9bf80327030f32473f453d8d206214872cd651decfaff17b00385c71",
+    "deployment/rollout_bc_unbounded.py": "e45b4569db48389ff271d341b4e0d97c7bfb3c01fe42996c3dae5acbe6502fda",
+    "deployment/shadow_act.py": "3a3523af7557cc0d1c1590a80e91002cffde4acc9e049910a15379f84fa10866",
+    "deployment/shadow_bc.py": "9acf7af4068b590cad58821c6398528965a8e9e3a83f3c44a179ce81463e6427",
+    "pipeline_config.toml": "54bb078d0f6f3fa9b6b88782b4b45b655dbb17d1648e4a15ffb102490d5bfba8",
+    "pipeline_settings.py": "cfa9f5d13d336477d8f559eb92584a2ce76f2a9f4aa070907b10f28eb8adf34b",
+    "review/calibrate_act_limits.py": "74cbc133771ac0ddabedcff541617091c8f71400a8d0f958c44dcbcb8f906277",
+    "support/configuration_act.py": "c38ac38d0fcd2d5c000af71714ea65e9cf8cfc7064eb81b6a4b35b7eee6dc308",
+    "teleoperation/default_pose.json": "1e2483e6d8f65da609a836455e3c6fd8c627b8df9ff6892b6191567c925a971d",
+    "teleoperation/define_default_position.py": "477deb6a0c4f66e8736a536c77760ec1347241c7f7004ceffaf59aec80b88b1e",
+    "teleoperation/teleoperate_to_default.py": "e6f6ecaff39980e75588ecd64022644f781d1de98bcffc2cc9b20e8aafd5b31c",
+    "train/bc_model.py": "ea0a2e6866603656c642f768a6059b911e468261cd41568df1e3f184d7c87281",
+    "train/bc_targets.py": "5c641fbd83e7082f6b06dce2614ecde14011fc12df8d0611938ebd74840f58c0"
+  }
+}
