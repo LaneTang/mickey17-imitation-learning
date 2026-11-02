@@ -1,0 +1,1207 @@
+{
+  "schema_version": 1,
+  "metric": "observed_motion_place_and_return_candidate",
+  "definition": "Elapsed rollout time at onset of sustained six-channel home return after departure, opening, closing and reopening; includes initial inference hold.",
+  "warning": "Motion signature only: no visual placement verification. Labels are not read. Thresholds are exploratory; review candidates before reporting task completion.",
+  "settings": {
+    "home_tolerance": 7.0,
+    "departure_distance": 15.0,
+    "open_rise": 15.0,
+    "close_drop": 15.0,
+    "release_rise": 10.0,
+    "event_hold_s": 0.25,
+    "home_hold_s": 0.5,
+    "max_gap_s": 0.2
+  },
+  "trials": [
+    {
+      "trial_id": "act_offset0_overlap_20261030_234141_253354",
+      "memberships": [
+        "alpha/alpha-0.1"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.1,
+      "source_sha256": {
+        "manifest.json": "0252dba87a2f233a6de06645cd52fdfec0b60164296a1cc52b18b62c7ca614e0",
+        "cycles.csv": "ce4c0c701bf3689e245f0ba6dfe8919bcc847d55c41a7a7f77114cd742759c9b"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 37.28322,
+      "confirmed_at_s": 37.7902,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.29687,
+        "opening_onset_s": 1.80741,
+        "closing_onset_s": 7.34421,
+        "release_onset_s": 17.42945,
+        "home_onset_s": 37.28322
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_234252_404068",
+      "memberships": [
+        "alpha/alpha-0.1"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.1,
+      "source_sha256": {
+        "manifest.json": "2c2b401e6bc7ea615c0dc93e9e9350cecac5c5c04a6807c92fb24310775e3165",
+        "cycles.csv": "1be84b6e5a348f3e013b5a0ae2846a67fedd9a6798aba6b13668b978c36688e9"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 28.82646,
+      "confirmed_at_s": 29.33938,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.396,
+        "opening_onset_s": 2.01136,
+        "closing_onset_s": 12.60656,
+        "release_onset_s": 22.71602,
+        "home_onset_s": 28.82646
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_234349_552312",
+      "memberships": [
+        "alpha/alpha-0.1"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.1,
+      "source_sha256": {
+        "manifest.json": "add58e0bb931e3fc04935c3f971adddd1c544fa3b7e9dbe9fe3eb176ac29460f",
+        "cycles.csv": "b3e43ecfbc323e80fff06a9573179af30d4d79583101de8cd1809ada2ce03957"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 23.31356,
+      "confirmed_at_s": 23.83124,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.33924,
+        "opening_onset_s": 2.05726,
+        "closing_onset_s": 8.06675,
+        "release_onset_s": 18.13276,
+        "home_onset_s": 23.31356
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_234446_605574",
+      "memberships": [
+        "alpha/alpha-0.1"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.1,
+      "source_sha256": {
+        "manifest.json": "a00827079174f89153981b893f914c946fbea303c516966546bb1e5705dfa53d",
+        "cycles.csv": "81ed2c9999caa276d6745d2fabf633839f8aa786ac90bf7adc2c5a44046bd7c1"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 23.8358,
+      "confirmed_at_s": 24.3435,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.26849,
+        "opening_onset_s": 1.81042,
+        "closing_onset_s": 10.10039,
+        "release_onset_s": 18.89216,
+        "home_onset_s": 23.8358
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_234542_981705",
+      "memberships": [
+        "alpha/alpha-0.1"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.1,
+      "source_sha256": {
+        "manifest.json": "f3d5086e819842e03edae8b9cca598a89c24850e722cad9fe3ee7a80233338e9",
+        "cycles.csv": "15370943e0bf4f21974a0ac826e1266c9a26d3b265d5a31e19042ec53d1a431b"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": false,
+      "candidate_completion_time_s": null,
+      "confirmed_at_s": null,
+      "phase": "awaiting_release",
+      "events": {
+        "departure_onset_s": 1.26128,
+        "opening_onset_s": 1.94118,
+        "closing_onset_s": 14.28077
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_234658_756244",
+      "memberships": [
+        "alpha/alpha-0.1"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.1,
+      "source_sha256": {
+        "manifest.json": "84ccded9056aeb703d1081c85bf8260f2a58728b97fb324eda11aa5971ccd526",
+        "cycles.csv": "c194464125215446e83ff12706d99a7c13f652a78b11e5fb0c7abf1b6cbdf1a4"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 24.70246,
+      "confirmed_at_s": 25.21272,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.33876,
+        "opening_onset_s": 2.02487,
+        "closing_onset_s": 11.73986,
+        "release_onset_s": 19.55088,
+        "home_onset_s": 24.70246
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_234805_276304",
+      "memberships": [
+        "alpha/alpha-0.1"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.1,
+      "source_sha256": {
+        "manifest.json": "bd1eaa549164900fc594b67d5c7cbceae7579b6dbd80eed4e5369023f7a1e144",
+        "cycles.csv": "581a4b75cb42d16570d93b39eb5a6c3cea0dff07d7529a3e153624ee7b71b69a"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": false,
+      "candidate_completion_time_s": null,
+      "confirmed_at_s": null,
+      "phase": "awaiting_release",
+      "events": {
+        "departure_onset_s": 1.63871,
+        "opening_onset_s": 2.04902,
+        "closing_onset_s": 12.74375
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_234911_362344",
+      "memberships": [
+        "alpha/alpha-0.1"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.1,
+      "source_sha256": {
+        "manifest.json": "814877311c6bb7cf46e4a8802d22ba83f4f25ee2579698602377c8fc4ec3ff66",
+        "cycles.csv": "2880d56ee06c7c8e41287b849e90256fc364f909484ad53ae16a5c6c74ffd9bb"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 24.96673,
+      "confirmed_at_s": 25.47858,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.40233,
+        "opening_onset_s": 2.1244,
+        "closing_onset_s": 12.59854,
+        "release_onset_s": 20.09313,
+        "home_onset_s": 24.96673
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_235016_811497",
+      "memberships": [
+        "alpha/alpha-0.1"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.1,
+      "source_sha256": {
+        "manifest.json": "ce871c0b2649933bb9dbe6704102c4ca222be76cb2b5d28a7536176ef75793b5",
+        "cycles.csv": "47e8a750ceafae33833c04f4574b43b393b5fb27453c2764533ab04db54a7610"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 31.26361,
+      "confirmed_at_s": 31.77467,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.49871,
+        "opening_onset_s": 2.08924,
+        "closing_onset_s": 13.99668,
+        "release_onset_s": 26.66557,
+        "home_onset_s": 31.26361
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_235154_439956",
+      "memberships": [
+        "alpha/alpha-0.1"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.1,
+      "source_sha256": {
+        "manifest.json": "f34388ff0e05bb41a53df89bf72997ae453c77130062f2f6838210a39d326d5d",
+        "cycles.csv": "decbe8f59509f976d15d1470392282be87a3875019fa7900c1973eb913914dd8"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 27.38445,
+      "confirmed_at_s": 27.90299,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.36528,
+        "opening_onset_s": 2.01715,
+        "closing_onset_s": 7.81725,
+        "release_onset_s": 18.81726,
+        "home_onset_s": 27.38445
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_232503_752714",
+      "memberships": [
+        "alpha/alpha-0.2"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.2,
+      "source_sha256": {
+        "manifest.json": "0a98707fc614990c25c9fa03c27fe51a235049670174e29c31ac9c617d1497bd",
+        "cycles.csv": "d7dc5d3b4dde197e9ae688f5d8b47bc03e1aa6258a26cce0c53fcc7c5ac5bf20"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 14.36322,
+      "confirmed_at_s": 14.86755,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 0.9265,
+        "opening_onset_s": 1.64757,
+        "closing_onset_s": 4.83043,
+        "release_onset_s": 10.8611,
+        "home_onset_s": 14.36322
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_232615_030948",
+      "memberships": [
+        "alpha/alpha-0.2"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.2,
+      "source_sha256": {
+        "manifest.json": "ad0fb16a0a38b7aff5b6b25b793fa8daee9f7e044cbd1aa857c56eeb3ab46357",
+        "cycles.csv": "59f7520d3dac10221b1f0e41b6acb4c5f35f6c59f8f93ebcbfd638a36594140d"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 19.02554,
+      "confirmed_at_s": 19.53695,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.2367,
+        "opening_onset_s": 1.95525,
+        "closing_onset_s": 9.21805,
+        "release_onset_s": 15.0967,
+        "home_onset_s": 19.02554
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_233146_983455",
+      "memberships": [
+        "alpha/alpha-0.2"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.2,
+      "source_sha256": {
+        "manifest.json": "f1930d5510403f0dbe39a60437d36a219c36c494c47f1f2d92059678a51e2a7f",
+        "cycles.csv": "0aec24a352f776d02313604f3b99ad4b11adec694bfe07a2744a384ea5c61b37"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 18.29762,
+      "confirmed_at_s": 18.80302,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 0.99408,
+        "opening_onset_s": 1.59012,
+        "closing_onset_s": 8.176,
+        "release_onset_s": 14.3707,
+        "home_onset_s": 18.29762
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_233248_192984",
+      "memberships": [
+        "alpha/alpha-0.2"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.2,
+      "source_sha256": {
+        "manifest.json": "69c290007bcbe86e36d3635455b26043c1f9f47d286d15b22e6aae7fa0f34485",
+        "cycles.csv": "6e85a785a23a2d12bce995ed493292dde924dc9856299e18b101ac21890dd864"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": false,
+      "candidate_completion_time_s": null,
+      "confirmed_at_s": null,
+      "phase": "awaiting_home",
+      "events": {
+        "departure_onset_s": 1.12369,
+        "opening_onset_s": 1.56518,
+        "closing_onset_s": 6.38951,
+        "release_onset_s": 13.76494
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_233405_621168",
+      "memberships": [
+        "alpha/alpha-0.2"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.2,
+      "source_sha256": {
+        "manifest.json": "f7f4d4cc2de11a29828ecbd13635c0e77b21229ea9551e4e01ff489617b84fcc",
+        "cycles.csv": "28430efd32d6028f7cb51eb6842121b45c8bddd272e16f4e10d988809bfd49e9"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": false,
+      "candidate_completion_time_s": null,
+      "confirmed_at_s": null,
+      "phase": "awaiting_home",
+      "events": {
+        "departure_onset_s": 0.67974,
+        "opening_onset_s": 1.25815,
+        "closing_onset_s": 8.49837,
+        "release_onset_s": 31.44329
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_233516_288128",
+      "memberships": [
+        "alpha/alpha-0.2"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.2,
+      "source_sha256": {
+        "manifest.json": "1095238772a5bdd39e826608250ff67676b3e2b789db6ec3720dc3b93a420090",
+        "cycles.csv": "dd85fe8274e7be3912e2feed7a44e25e3bac266d57982291d46e997715cb5918"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": false,
+      "candidate_completion_time_s": null,
+      "confirmed_at_s": null,
+      "phase": "awaiting_release",
+      "events": {
+        "departure_onset_s": 1.88287,
+        "opening_onset_s": 2.60397,
+        "closing_onset_s": 6.89262
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_233632_614539",
+      "memberships": [
+        "alpha/alpha-0.2"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.2,
+      "source_sha256": {
+        "manifest.json": "a66155539ca50c6b6047956dcd4eec0b123ce9b0c27aa322e3913eb77c3f5c49",
+        "cycles.csv": "c9a6359dd5cd6a565cda5b216defcc39c41d6730af6c35d8ca31942b5b46764f"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 17.59212,
+      "confirmed_at_s": 18.1055,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.10001,
+        "opening_onset_s": 1.75103,
+        "closing_onset_s": 6.3006,
+        "release_onset_s": 12.70003,
+        "home_onset_s": 17.59212
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_233742_600352",
+      "memberships": [
+        "alpha/alpha-0.2"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.2,
+      "source_sha256": {
+        "manifest.json": "152cfaec006285ef1caa0fc1362c614c5af89f53e3951355e16b206113675c7b",
+        "cycles.csv": "2c062cca8f8d2d08051d18567a21594495d130da82edb03e08ed484db626c872"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 25.18675,
+      "confirmed_at_s": 25.69443,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.23627,
+        "opening_onset_s": 1.94922,
+        "closing_onset_s": 8.54936,
+        "release_onset_s": 15.82415,
+        "home_onset_s": 25.18675
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_233843_144569",
+      "memberships": [
+        "alpha/alpha-0.2"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.2,
+      "source_sha256": {
+        "manifest.json": "420c7162cec3123877856beff0843e66dd4b9d7003482b21abb5e9c5726f0a7d",
+        "cycles.csv": "436bd42dc1786b5439c926c16bf545049d158f914d24ea37c8341fcf4380c6a2"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 22.58609,
+      "confirmed_at_s": 23.09528,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.22896,
+        "opening_onset_s": 1.98539,
+        "closing_onset_s": 6.94909,
+        "release_onset_s": 13.72826,
+        "home_onset_s": 22.58609
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_233941_435522",
+      "memberships": [
+        "alpha/alpha-0.2"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.2,
+      "source_sha256": {
+        "manifest.json": "78bcf521e9214450e9cd37d33228baf0c7f865feb7b002ef820262c5bb2e46e4",
+        "cycles.csv": "48b731e87ab9b81da8c616c66ced8b64de1978ac8edd9b0e94e02fd934ac4178"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 27.68242,
+      "confirmed_at_s": 28.19083,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.30087,
+        "opening_onset_s": 2.01981,
+        "closing_onset_s": 16.33131,
+        "release_onset_s": 22.57372,
+        "home_onset_s": 27.68242
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_220623_196134",
+      "memberships": [
+        "alpha/alpha-0.5",
+        "base/origin[baseline]",
+        "cube/deg0[baseline]"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.5,
+      "source_sha256": {
+        "manifest.json": "4d56d2292c2d3270c1edbaa802a25dde649d4ba5e9daf116d65cd7e53a1b95e5",
+        "cycles.csv": "5138687cf5733a953f896f6bc76a24512b8118eb816f61fab7ff72eecc9af1e9"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 20.35252,
+      "confirmed_at_s": 20.86176,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.29856,
+        "opening_onset_s": 1.99264,
+        "closing_onset_s": 9.70913,
+        "release_onset_s": 16.339,
+        "home_onset_s": 20.35252
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_220734_695561",
+      "memberships": [
+        "alpha/alpha-0.5",
+        "base/origin[baseline]",
+        "cube/deg0[baseline]"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.5,
+      "source_sha256": {
+        "manifest.json": "9c4df2600be45ed43381972f9cd1c7292924ea8ec0b8d68c63b5699d222dfdd1",
+        "cycles.csv": "3be9e0e67ea740e6101c0acf36bdcbe39222e371b33239ef3bd80d0398dbb2ac"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 28.61187,
+      "confirmed_at_s": 29.11977,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.22974,
+        "opening_onset_s": 1.60445,
+        "closing_onset_s": 5.22523,
+        "release_onset_s": 25.23747,
+        "home_onset_s": 28.61187
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_220842_228703",
+      "memberships": [
+        "alpha/alpha-0.5",
+        "base/origin[baseline]",
+        "cube/deg0[baseline]"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.5,
+      "source_sha256": {
+        "manifest.json": "4de9ababa5b057a808befd54654e6a5128cf7efeb73f380df6c85b430bd0ca53",
+        "cycles.csv": "e19473324949747e538155a522be33552706b7f4e77897be6f8a5c4f6f14093a"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": false,
+      "candidate_completion_time_s": null,
+      "confirmed_at_s": null,
+      "phase": "awaiting_closing",
+      "events": {
+        "departure_onset_s": 1.16859,
+        "opening_onset_s": 1.88689
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_221026_446645",
+      "memberships": [
+        "alpha/alpha-0.5",
+        "base/origin[baseline]",
+        "cube/deg0[baseline]"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.5,
+      "source_sha256": {
+        "manifest.json": "b41cd510210ac248afbb8829c6035505c9a93cbf5c6aa2ebed0d149b1cb45865",
+        "cycles.csv": "bb434f02b4dc1237fd95e3d05be4b8945f19a1775190f8a6ec648ea96ae42e32"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 25.25967,
+      "confirmed_at_s": 25.77205,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 0.64884,
+        "opening_onset_s": 1.46442,
+        "closing_onset_s": 8.1976,
+        "release_onset_s": 21.7968,
+        "home_onset_s": 25.25967
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_221128_514341",
+      "memberships": [
+        "alpha/alpha-0.5",
+        "base/origin[baseline]",
+        "cube/deg0[baseline]"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.5,
+      "source_sha256": {
+        "manifest.json": "4d0f58b72fdb42d94f3f6483005f6324e60cd8e5e2026c4717fdff3825f0fdba",
+        "cycles.csv": "e6198c34eb5affd7a86512c724b982ef18e8e11959cf053f28f65e3d1ca5f902"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 16.73133,
+      "confirmed_at_s": 17.24884,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.19976,
+        "opening_onset_s": 1.81327,
+        "closing_onset_s": 8.3152,
+        "release_onset_s": 13.53743,
+        "home_onset_s": 16.73133
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_221242_908468",
+      "memberships": [
+        "alpha/alpha-0.5",
+        "base/origin[baseline]",
+        "cube/deg0[baseline]"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.5,
+      "source_sha256": {
+        "manifest.json": "842e517f55643970d0abbcfcd680f3b6e30b1f87bdbcaf0e4e5776c83556c37b",
+        "cycles.csv": "821922450f658a6e6a8cd3823968690eb528de7ec67a51416a3dbd57b6430822"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": false,
+      "candidate_completion_time_s": null,
+      "confirmed_at_s": null,
+      "phase": "awaiting_home",
+      "events": {
+        "departure_onset_s": 1.19688,
+        "opening_onset_s": 1.64489,
+        "closing_onset_s": 9.65855,
+        "release_onset_s": 15.50047
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_221350_247996",
+      "memberships": [
+        "alpha/alpha-0.5",
+        "base/origin[baseline]",
+        "cube/deg0[baseline]"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.5,
+      "source_sha256": {
+        "manifest.json": "0962e91266ab33819977835e8acf0f838df6f3ea41127f2e69fdf41b7f86e9ba",
+        "cycles.csv": "1707fcabac3d65903ee8f2507d01c0d566c5469d4cea5ff30a661f88d6fad16e"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 16.62616,
+      "confirmed_at_s": 17.13508,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.05597,
+        "opening_onset_s": 1.6343,
+        "closing_onset_s": 7.19042,
+        "release_onset_s": 7.59692,
+        "home_onset_s": 16.62616
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_221504_909899",
+      "memberships": [
+        "alpha/alpha-0.5",
+        "base/origin[baseline]",
+        "cube/deg0[baseline]"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.5,
+      "source_sha256": {
+        "manifest.json": "f78e9f29342860c3dc92614214f4cc897484ae2442125479f29cf8d92d3bf7f5",
+        "cycles.csv": "5a633347ff71a56fae2e21960bab2fa26231517546ceec09ef2563489566b4cd"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 18.00761,
+      "confirmed_at_s": 18.52373,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 0.99524,
+        "opening_onset_s": 1.54124,
+        "closing_onset_s": 7.88786,
+        "release_onset_s": 14.57879,
+        "home_onset_s": 18.00761
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_221609_701620",
+      "memberships": [
+        "alpha/alpha-0.5",
+        "base/origin[baseline]",
+        "cube/deg0[baseline]"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.5,
+      "source_sha256": {
+        "manifest.json": "0891bbc47862f4855dfde8cbb8701f1c380d4771ababa9b5a6ee55a69c27b48c",
+        "cycles.csv": "8d8401bcaa9ef1c8dcbfb2d2e834cf4867d9fe6991c64f713b1cc7e34b63f91a"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 23.58276,
+      "confirmed_at_s": 24.09015,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 0.86497,
+        "opening_onset_s": 1.62383,
+        "closing_onset_s": 9.09437,
+        "release_onset_s": 19.85493,
+        "home_onset_s": 23.58276
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_221728_481123",
+      "memberships": [
+        "alpha/alpha-0.5",
+        "base/origin[baseline]",
+        "cube/deg0[baseline]"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.5,
+      "source_sha256": {
+        "manifest.json": "6bb77c46fed3d736952b3df480099839536f5a308bb72b18d65071a52fc76f3b",
+        "cycles.csv": "84f430a744f0b2bd347bda8a035c448c4602dc807f01cc5e1ec3336086239f63"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": false,
+      "candidate_completion_time_s": null,
+      "confirmed_at_s": null,
+      "phase": "awaiting_closing",
+      "events": {
+        "departure_onset_s": 1.10084,
+        "opening_onset_s": 1.95712
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_223316_505439",
+      "memberships": [
+        "alpha/alpha-0.8"
+      ],
+      "rollout_status": "error: ACT proposal gap on arm_wrist_flex.pos is 31.07; empirical stop threshold is 29.90",
+      "alpha": 0.8,
+      "source_sha256": {
+        "manifest.json": "90c34bca6af3fe82d6d4a4f6151874af53c2d06db8498fb0b97348b9380debe7",
+        "cycles.csv": "9aaf9aa07058d2c6223666af4fcc075e5a5db9d6ec6bd8bfe2aa9ca1efe23dd1"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": false,
+      "candidate_completion_time_s": null,
+      "confirmed_at_s": null,
+      "phase": "awaiting_home",
+      "events": {
+        "departure_onset_s": 1.32764,
+        "opening_onset_s": 1.98564,
+        "closing_onset_s": 8.00307,
+        "release_onset_s": 37.46519
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_223430_006387",
+      "memberships": [
+        "alpha/alpha-0.8"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.8,
+      "source_sha256": {
+        "manifest.json": "b627af2634a3436fee89d457f2c0f686f91d88cd5235685aa33920f75879b226",
+        "cycles.csv": "5bd37c82d2cf5ad87b42e63713a52b63084d03f11bf469ecb361934ab9c97d51"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 23.42415,
+      "confirmed_at_s": 23.93041,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.12614,
+        "opening_onset_s": 1.63413,
+        "closing_onset_s": 7.99257,
+        "release_onset_s": 16.28518,
+        "home_onset_s": 23.42415
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_223713_126007",
+      "memberships": [
+        "alpha/alpha-0.8"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.8,
+      "source_sha256": {
+        "manifest.json": "19f2459e4d3704f4afc10ed6afe069d33ca6dc0416c328cec8ae2f3ba58005b8",
+        "cycles.csv": "944bda0d18d4fcf97e6385b48e4a011fbc7a5c675cc04462ac294bd1449948ba"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 16.58813,
+      "confirmed_at_s": 17.10199,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.1984,
+        "opening_onset_s": 1.8505,
+        "closing_onset_s": 7.66946,
+        "release_onset_s": 13.17298,
+        "home_onset_s": 16.58813
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_224129_596318",
+      "memberships": [
+        "alpha/alpha-0.8"
+      ],
+      "rollout_status": "error: ACT proposal gap on arm_shoulder_pan.pos is 26.93; empirical stop threshold is 22.40",
+      "alpha": 0.8,
+      "source_sha256": {
+        "manifest.json": "60998b2c9ea7b8fdf893e8f6ab6e4d59474abc08c3185afee1ef3eb33e9a2a44",
+        "cycles.csv": "23b5c6197884253de607e104a318b32c358c501d04036ae3e010ba8ce62ac6b9"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": false,
+      "candidate_completion_time_s": null,
+      "confirmed_at_s": null,
+      "phase": "awaiting_home",
+      "events": {
+        "departure_onset_s": 1.13313,
+        "opening_onset_s": 1.84655,
+        "closing_onset_s": 5.30808,
+        "release_onset_s": 5.75441
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_224223_414818",
+      "memberships": [
+        "alpha/alpha-0.8"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.8,
+      "source_sha256": {
+        "manifest.json": "c2dd925f02d1d8603570ad6748c27adedb66d4933b31e43203bd65b8e512e118",
+        "cycles.csv": "8345c5cec7af81da91fc621e79639511ca27f952c81d4acefc74c04af8e38210"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 16.97484,
+      "confirmed_at_s": 17.49392,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.09481,
+        "opening_onset_s": 1.6452,
+        "closing_onset_s": 8.08592,
+        "release_onset_s": 13.11898,
+        "home_onset_s": 16.97484
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_224335_862885",
+      "memberships": [
+        "alpha/alpha-0.8"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.8,
+      "source_sha256": {
+        "manifest.json": "dfcc63da236240a34c4e803956ee7fa3d601204090ef5a869ddab5adf302a208",
+        "cycles.csv": "4a51fdfd1048bb774d2e0869b30d5dfd6a1f53303de59881f4197d2b0574bcde"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": false,
+      "candidate_completion_time_s": null,
+      "confirmed_at_s": null,
+      "phase": "awaiting_release",
+      "events": {
+        "departure_onset_s": 0.92383,
+        "opening_onset_s": 1.60482,
+        "closing_onset_s": 5.21779
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_225811_325419",
+      "memberships": [
+        "alpha/alpha-0.8"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.8,
+      "source_sha256": {
+        "manifest.json": "c4b62d0ea0bba7b9986d6b8e24992ab4ed055bcd648e1ebe40a4478da9b28faa",
+        "cycles.csv": "1c3b3569193c218e9f944b53aca34f917d5b97d29c7bff3a0ace8adee9ab3dd9"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 18.75468,
+      "confirmed_at_s": 19.2751,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.33382,
+        "opening_onset_s": 2.05676,
+        "closing_onset_s": 6.52021,
+        "release_onset_s": 15.32697,
+        "home_onset_s": 18.75468
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_225935_882223",
+      "memberships": [
+        "alpha/alpha-0.8"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.8,
+      "source_sha256": {
+        "manifest.json": "cd449f2115b6b509665b8d744d74c733b1d8d92908ef9e9872224fcecc4f8185",
+        "cycles.csv": "8ac66cd691fd150d502f6a060ef5cd25ceac07596749b9e5e1c61479f09ca052"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 15.03937,
+      "confirmed_at_s": 15.54251,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.13116,
+        "opening_onset_s": 1.71215,
+        "closing_onset_s": 6.39505,
+        "release_onset_s": 11.35078,
+        "home_onset_s": 15.03937
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_230058_144584",
+      "memberships": [
+        "alpha/alpha-0.8"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 0.8,
+      "source_sha256": {
+        "manifest.json": "47b727a59489cf5baf898351851b651253346b257d94b22187cda6fd7eebdf9e",
+        "cycles.csv": "205bcd6632622ed7d1cc48ed089a5f5004b07702d1f521aec66f61b7a7a80a6e"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 18.34563,
+      "confirmed_at_s": 18.85584,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.23381,
+        "opening_onset_s": 1.71424,
+        "closing_onset_s": 6.79775,
+        "release_onset_s": 11.78698,
+        "home_onset_s": 18.34563
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_230208_736833",
+      "memberships": [
+        "alpha/alpha-0.8"
+      ],
+      "rollout_status": "error: ACT averaged proposal changed too far in one cycle",
+      "alpha": 0.8,
+      "source_sha256": {
+        "manifest.json": "c90823f0d7cceb1f176ef6b261a9e94114e54df60b3dc16d52f8fa636cfa38e0",
+        "cycles.csv": "2d01791a45251577fe30b690d563d6b79e6020325b09df2d0ab898cc2ce049af"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": false,
+      "candidate_completion_time_s": null,
+      "confirmed_at_s": null,
+      "phase": "awaiting_opening",
+      "events": {
+        "departure_onset_s": 1.23578
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_222004_121935",
+      "memberships": [
+        "alpha/alpha-1[baseline]"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 1.0,
+      "source_sha256": {
+        "manifest.json": "84ad01f971965f473c790bd8c3cea549a1ac86eae06c0daad8190b251723c25d",
+        "cycles.csv": "307f518bf4b59889e30876d2f9ba1ec38f83877131f39ba909f51819fd7cc8a9"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": false,
+      "candidate_completion_time_s": null,
+      "confirmed_at_s": null,
+      "phase": "awaiting_release",
+      "events": {
+        "departure_onset_s": 0.75597,
+        "opening_onset_s": 1.53548,
+        "closing_onset_s": 6.067
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_222107_727140",
+      "memberships": [
+        "alpha/alpha-1[baseline]"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 1.0,
+      "source_sha256": {
+        "manifest.json": "155f64efba99e7ee2d00a82db98b81607a696c5a145c8bee4ebed3721434dde9",
+        "cycles.csv": "cce4a8b8fe88ebe07082d4adbd3658771b5b4fa075135ef4cbc7f5337aac815f"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 23.32447,
+      "confirmed_at_s": 23.83025,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 0.79191,
+        "opening_onset_s": 1.57391,
+        "closing_onset_s": 5.62032,
+        "release_onset_s": 6.02931,
+        "home_onset_s": 23.32447
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_222223_465289",
+      "memberships": [
+        "alpha/alpha-1[baseline]"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 1.0,
+      "source_sha256": {
+        "manifest.json": "061ed24ab62fcabde784bc1203a99acd6930464a1ebc504cb6d019c292ede249",
+        "cycles.csv": "b984cf3ab908b64f295adad1e536a1484affeca7b93ce47a5346431473467fad"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 31.68242,
+      "confirmed_at_s": 32.19464,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.10529,
+        "opening_onset_s": 1.58283,
+        "closing_onset_s": 12.40561,
+        "release_onset_s": 21.37082,
+        "home_onset_s": 31.68242
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_222324_316161",
+      "memberships": [
+        "alpha/alpha-1[baseline]"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 1.0,
+      "source_sha256": {
+        "manifest.json": "bd8f1a9b4b481f59ada743ce44536f75e6cfb2ae03be78558f3911de45a8d068",
+        "cycles.csv": "7785808b941cc5e32c56a60ad22069331f3f2e2407b51bdd37e74bae27960fca"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": false,
+      "candidate_completion_time_s": null,
+      "confirmed_at_s": null,
+      "phase": "awaiting_closing",
+      "events": {
+        "departure_onset_s": 1.05628,
+        "opening_onset_s": 1.60331
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_222520_624170",
+      "memberships": [
+        "alpha/alpha-1[baseline]"
+      ],
+      "rollout_status": "error: ACT averaged proposal changed too far in one cycle",
+      "alpha": 1.0,
+      "source_sha256": {
+        "manifest.json": "23ac54fa0e8a9612f4304e3ee9184804b6cd8cbc77b8b87841fe7ce420b6cbc6",
+        "cycles.csv": "70ece2026649a3f05a9273ae649abb121ba12f799906dc936e1b0f6dafb9e6eb"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": false,
+      "candidate_completion_time_s": null,
+      "confirmed_at_s": null,
+      "phase": "awaiting_release",
+      "events": {
+        "departure_onset_s": 0.75402,
+        "opening_onset_s": 1.53636,
+        "closing_onset_s": 6.87908
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_222620_893533",
+      "memberships": [
+        "alpha/alpha-1[baseline]"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 1.0,
+      "source_sha256": {
+        "manifest.json": "df87ffb3fc76f8922a753f7ff3197e757311f860304e66bd7854116bf4b34baa",
+        "cycles.csv": "4ae2b7ff8c2b8a53e0e91ee12cf52543508f2db97d8e39197f404cdbcbe5368c"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 18.75121,
+      "confirmed_at_s": 19.2602,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 0.8292,
+        "opening_onset_s": 1.54605,
+        "closing_onset_s": 10.39846,
+        "release_onset_s": 15.75383,
+        "home_onset_s": 18.75121
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_222724_005793",
+      "memberships": [
+        "alpha/alpha-1[baseline]"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 1.0,
+      "source_sha256": {
+        "manifest.json": "ff99fb7131eaa6a6f863d9ccb1de3837f2bbbae7d6360d920d48d0f256884336",
+        "cycles.csv": "0376a5a51e7495a963de332423f33f05bc0e2f90d5e5ac3a41dcf947ef5cd49e"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 25.77534,
+      "confirmed_at_s": 26.28582,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.20502,
+        "opening_onset_s": 1.57437,
+        "closing_onset_s": 10.5284,
+        "release_onset_s": 22.27244,
+        "home_onset_s": 25.77534
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_222832_548601",
+      "memberships": [
+        "alpha/alpha-1[baseline]"
+      ],
+      "rollout_status": "error: ACT averaged proposal changed too far in one cycle",
+      "alpha": 1.0,
+      "source_sha256": {
+        "manifest.json": "9137aaff49b542a26e886c55d5825e9a490348ad30cfb4346097e925727f352c",
+        "cycles.csv": "9f142c47efc1098382945e21e6a2a1a7eb06cd3fa74165dc22a446d8f6b3b6c2"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": false,
+      "candidate_completion_time_s": null,
+      "confirmed_at_s": null,
+      "phase": "awaiting_home",
+      "events": {
+        "departure_onset_s": 1.19122,
+        "opening_onset_s": 1.90297,
+        "closing_onset_s": 10.08772,
+        "release_onset_s": 16.85503
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_222938_959269",
+      "memberships": [
+        "alpha/alpha-1[baseline]"
+      ],
+      "rollout_status": "error: ACT averaged proposal changed too far in one cycle",
+      "alpha": 1.0,
+      "source_sha256": {
+        "manifest.json": "9cb565851c960c92d1d3ef65b260f090911e41d78ce9a6d21c9e7c5f5384700b",
+        "cycles.csv": "50cd6937b4b19747962967ae9f78731baa2c24ef0928c489d89b7d3adaa195d1"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": false,
+      "candidate_completion_time_s": null,
+      "confirmed_at_s": null,
+      "phase": "awaiting_home",
+      "events": {
+        "departure_onset_s": 0.79611,
+        "opening_onset_s": 1.55094,
+        "closing_onset_s": 10.58619,
+        "release_onset_s": 15.28765
+      }
+    },
+    {
+      "trial_id": "act_offset0_overlap_20261030_223018_564351",
+      "memberships": [
+        "alpha/alpha-1[baseline]"
+      ],
+      "rollout_status": "time limit",
+      "alpha": 1.0,
+      "source_sha256": {
+        "manifest.json": "40413020f1f30efc05a13f7351fa507691efbcb551c45f322d5da6b36250d56c",
+        "cycles.csv": "558e3d3625bc91a6dc9bdda4afb078223ce696547d8a44c4b7611f703cc5bc7e"
+      },
+      "starting_pose_source": "manifest.start_state",
+      "normal_ending_candidate": true,
+      "candidate_completion_time_s": 34.73998,
+      "confirmed_at_s": 35.25453,
+      "phase": "home_confirmed",
+      "events": {
+        "departure_onset_s": 1.16312,
+        "opening_onset_s": 1.88027,
+        "closing_onset_s": 5.29192,
+        "release_onset_s": 32.15748,
+        "home_onset_s": 34.73998
+      }
+    }
+  ],
+  "source_report_sha256": "334590397983363d5b07ab74d91f0a8410a543ee0856f9c285adc357fb4aec27"
+}

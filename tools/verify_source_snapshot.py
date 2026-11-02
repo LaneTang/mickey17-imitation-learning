@@ -9,10 +9,11 @@ def main():
     root = Path(__file__).resolve().parents[1]
     manifest = json.loads((root / "source_provenance.json").read_text())
     extensions = json.loads((root / "local_extensions.json").read_text())["files"]
+    relocations = json.loads((root / "source_relocations.json").read_text())["files"]
     errors = []
     unchanged = extended = 0
     for relative_path, expected_hash in manifest["nuc_files"].items():
-        path = root / relative_path
+        path = root / relocations.get(relative_path, {}).get("path", relative_path)
         if not path.is_file():
             errors.append(f"Missing: {relative_path}")
         else:
@@ -32,6 +33,12 @@ def main():
     for path in extensions:
         if path not in manifest["nuc_files"]:
             errors.append(f"Extension has no original NUC entry: {path}")
+    for original, relocation in relocations.items():
+        path = root / relocation["path"]
+        if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != relocation["sha256"]:
+            errors.append(f"Relocated source changed or missing: {original}")
+        if (root / original).exists():
+            errors.append(f"Old source path unexpectedly exists: {original}")
     if errors:
         print("\n".join(errors))
         raise SystemExit(1)

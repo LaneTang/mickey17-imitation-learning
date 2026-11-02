@@ -68,3 +68,65 @@ Additional verification covers:
 - All 24 current analysis artifacts regenerate byte-for-byte from a clean
   checkout and the public snapshot. Figures and media are visually inspected;
   documentation links and the live player are checked before delivery.
+
+## Local README polish · 2026-11-02
+
+This pass is local only: no commit or push. The annotated starting README is
+archived separately as `README-author-draft-2026-11-02-before-polish.md` with
+SHA-256 `a391bd759999c4eb38975e5f011733a682af0f37c07ce3612e075f75b257d364`.
+The nine numbered sections remain in order; editing notes have been replaced
+with the requested illustrations and first-person prose.
+
+- Six new PNG/SVG pairs cover the ACT architecture, scheduling/filter detail,
+  dataset accounting, all-demo joint commands, practice and policy deployment.
+  The existing experiment-pipeline figure and all November 1 analysis files
+  retain their starting bytes.
+- Dataset accounting is verified against the source map, Parquet and saved
+  split: 158 demos / 75,570 frames; scene 94 train + 16 validation; motion
+  40 train + 8 validation. The six-channel, nominal-10-Hz snapshot has 25,327
+  samples and retains the final sample of every demonstration.
+- All sampled commands and timestamps match the corresponding original
+  samples after six-decimal rounding. No source dataset or robot file is
+  modified. Snapshot metadata records source and derived hashes.
+- The completion chart changes only presentation. Its five medians and timed
+  sample counts remain 26.18 (8), 19.03 (7), 20.35 (7), 17.66 (6), 25.78 (5).
+  Existing placement-table values remain unchanged. The caption distinguishes
+  the unverified motion estimate from operator placement markers.
+- Thirty hardware-free tests pass. Twelve new figure files and all five
+  completion artifacts reproduce byte-for-byte in a separate snapshot-only
+  directory, without local datasets or hardware imports.
+- Every new PNG and editable SVG is visually inspected. The README is
+  previewed with an 838 px content width; all 16 images load. Local links,
+  section order, removed placeholders, SVG text and archive hashes are checked.
+  SVG exports include a sans-serif fallback for browsers without DejaVu Sans.
+
+These checks verify presentation and evidence handling. The automatic
+completion detector has not been validated against video; no new task-success
+claim, training or robot experiment is added.
+
+### Flow-figure follow-up
+
+The dataset and outcome Sankey figures were subsequently restyled with curved,
+separated branches to match the author's reference. Dataset endpoints now
+show each collection group's train/validation split separately. The shared
+renderer validates conservation at both branching stages and preserves exact
+count-proportional widths, including the one-trial placement-only outcome.
+All percentages use the full dataset or primary-trial denominator. Both SVGs
+were inspected at 838 px, and PNG/SVG exports are updated in their existing
+locations. All other regenerated artifacts match byte-for-byte; all 30 tests
+and the source-snapshot verifier pass. This follow-up remains local.
+
+## Final publication check · 2026-11-02
+
+The complete staged repository was exported to a clean temporary checkout.
+All 30 tests passed, and all 41 generated artifacts reproduced byte-for-byte:
+24 current outcome artifacts, 12 new README figure files and five completion
+artifacts. Checks also passed for root README links and section order,
+editable SVG text, archived-draft hashes, unchanged runtime/configuration and
+placement metrics, relocated source bytes, asset sizes, credential patterns
+and publication exclusions. Loose design-reference screenshots remain local.
+The author-edited older draft is preserved alongside a separate original copy;
+the archive index records both exact hashes. SVG trailing whitespace and CSV
+line endings were normalized by their generators without changing values or
+PNG rendering. Earlier "local only" notes describe the state before this
+publication pass; the user subsequently authorized committing and pushing.

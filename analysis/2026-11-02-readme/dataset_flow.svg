@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="735.84pt" height="431.857767pt" viewBox="0 0 735.84 431.857767" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 431.857767
+L 735.84 431.857767
+L 735.84 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 30.310946 265.46438
+C 184.837641 265.46438 197.714866 211.371367 352.241561 211.371367
+L 352.241561 77.6583
+C 197.714866 77.6583 184.837641 131.751313 30.310946 131.751313
+z
+" clip-path="url(#p01ba4d4807)" style="fill: #b9dde4"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 352.241561 211.371367
+L 363.390673 211.371367
+L 363.390673 77.6583
+L 352.241561 77.6583
+z
+" clip-path="url(#p01ba4d4807)" style="fill: #229eb1"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 363.390673 191.922193
+C 525.944729 191.922193 539.4909 165.787367 702.044956 165.787367
+L 702.044956 51.523473
+C 539.4909 51.523473 525.944729 77.6583 363.390673 77.6583
+z
+" clip-path="url(#p01ba4d4807)" style="fill: #c1ddb7"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 702.044956 165.787367
+L 713.194068 165.787367
+L 713.194068 51.523473
+L 702.044956 51.523473
+z
+" clip-path="url(#p01ba4d4807)" style="fill: #459c2b"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 363.390673 211.371367
+C 525.944729 211.371367 539.4909 235.682833 702.044956 235.682833
+L 702.044956 216.23366
+C 539.4909 216.23366 525.944729 191.922193 363.390673 191.922193
+z
+" clip-path="url(#p01ba4d4807)" style="fill: #f0b2ba"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 702.044956 235.682833
+L 713.194068 235.682833
+L 713.194068 216.23366
+L 702.044956 216.23366
+z
+" clip-path="url(#p01ba4d4807)" style="fill: #c54d69"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 30.310946 323.8119
+C 184.837641 323.8119 197.714866 378.5127 352.241561 378.5127
+L 352.241561 320.16518
+C 197.714866 320.16518 184.837641 265.46438 30.310946 265.46438
+z
+" clip-path="url(#p01ba4d4807)" style="fill: #f7d0b6"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 352.241561 378.5127
+L 363.390673 378.5127
+L 363.390673 320.16518
+L 352.241561 320.16518
+z
+" clip-path="url(#p01ba4d4807)" style="fill: #de9a71"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 363.390673 368.788113
+C 525.944729 368.788113 539.4909 326.850833 702.044956 326.850833
+L 702.044956 278.2279
+C 539.4909 278.2279 525.944729 320.16518 363.390673 320.16518
+z
+" clip-path="url(#p01ba4d4807)" style="fill: #c1ddb7"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 702.044956 326.850833
+L 713.194068 326.850833
+L 713.194068 278.2279
+L 702.044956 278.2279
+z
+" clip-path="url(#p01ba4d4807)" style="fill: #459c2b"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 363.390673 378.5127
+C 525.944729 378.5127 539.4909 393.707367 702.044956 393.707367
+L 702.044956 383.98278
+C 539.4909 383.98278 525.944729 368.788113 363.390673 368.788113
+z
+" clip-path="url(#p01ba4d4807)" style="fill: #f0b2ba"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 702.044956 393.707367
+L 713.194068 393.707367
+L 713.194068 383.98278
+L 702.044956 383.98278
+z
+" clip-path="url(#p01ba4d4807)" style="fill: #c54d69"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 19.161834 323.8119
+L 30.310946 323.8119
+L 30.310946 131.751313
+L 19.161834 131.751313
+z
+" clip-path="url(#p01ba4d4807)" style="fill: #229eb1"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans', Arial, sans-serif; text-anchor: end; fill: #50566f" x="343.182907" y="133.91457" transform="rotate(-0 343.182907 133.91457)">Scene variation</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 12.5px; font-family: 'DejaVu Sans', Arial, sans-serif; text-anchor: end; fill: #50566f" x="343.182907" y="152.79633" transform="rotate(-0 343.182907 152.79633)">110 · 69.6%</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans', Arial, sans-serif; text-anchor: end; fill: #50566f" x="692.986302" y="98.055157" transform="rotate(-0 692.986302 98.055157)">Training</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 12.5px; font-family: 'DejaVu Sans', Arial, sans-serif; text-anchor: end; fill: #50566f" x="692.986302" y="116.936917" transform="rotate(-0 692.986302 116.936917)">94 · 59.5%</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans', Arial, sans-serif; text-anchor: end; fill: #50566f" x="692.986302" y="215.357984" transform="rotate(-0 692.986302 215.357984)">Validation</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 12.5px; font-family: 'DejaVu Sans', Arial, sans-serif; text-anchor: end; fill: #50566f" x="692.986302" y="234.239744" transform="rotate(-0 692.986302 234.239744)">16 · 10.1%</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans', Arial, sans-serif; text-anchor: end; fill: #50566f" x="343.182907" y="338.738677" transform="rotate(-0 343.182907 338.738677)">Motion variation</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 12.5px; font-family: 'DejaVu Sans', Arial, sans-serif; text-anchor: end; fill: #50566f" x="343.182907" y="357.620437" transform="rotate(-0 343.182907 357.620437)">48 · 30.4%</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans', Arial, sans-serif; text-anchor: end; fill: #50566f" x="692.986302" y="291.939104" transform="rotate(-0 692.986302 291.939104)">Training</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 12.5px; font-family: 'DejaVu Sans', Arial, sans-serif; text-anchor: end; fill: #50566f" x="692.986302" y="310.820864" transform="rotate(-0 692.986302 310.820864)">40 · 25.3%</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans', Arial, sans-serif; text-anchor: end; fill: #50566f" x="692.986302" y="378.24481" transform="rotate(-0 692.986302 378.24481)">Validation</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 12.5px; font-family: 'DejaVu Sans', Arial, sans-serif; text-anchor: end; fill: #50566f" x="692.986302" y="397.12657" transform="rotate(-0 692.986302 397.12657)">8 · 5.1%</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans', Arial, sans-serif; text-anchor: start; fill: #50566f" x="40.06642" y="217.181344" transform="rotate(-0 40.06642 217.181344)">All demos</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 12.5px; font-family: 'DejaVu Sans', Arial, sans-serif; text-anchor: start; fill: #50566f" x="40.06642" y="236.063104" transform="rotate(-0 40.06642 236.063104)">158</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans', Arial, sans-serif; text-anchor: start; fill: #243746" x="19.161834" y="22.9575" transform="rotate(-0 19.161834 22.9575)">What went into the dataset</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', Arial, sans-serif; text-anchor: start; fill: #667581" x="19.161834" y="416.499367" transform="rotate(-0 19.161834 416.499367)">134 training · 24 validation · percentages of all 158 demos</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p01ba4d4807">
+   <rect x="10.8" y="10.801767" width="714.24" height="410.256"/>
+  </clipPath>
+ </defs>
+</svg>

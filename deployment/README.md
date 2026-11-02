@@ -6,6 +6,11 @@
 > [current reproduction and configuration](../docs/REPRODUCE.md) for the verified
 > offline workflow and the limits of hardware reproduction.
 
+Earlier standalone rollout variants now live in [archive/deployment](../archive/deployment/).
+The collection source has moved from `demo_collection/` to `collection/`.
+Historical commands below retain their original paths. Shared helpers remain
+here because the final ACT rollout imports them; no runtime refactor was made.
+
 ## Offline NUC ACT timing profile
 
 The latency-12 ACT variant requires the matching

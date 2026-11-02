@@ -1,0 +1,1448 @@
+{
+  "schema_version": 1,
+  "episodes": [
+    {
+      "episode": 0,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 1,
+      "group": "scene",
+      "split": "validation",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 2,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 3,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 4,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 5,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 6,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 7,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 8,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 9,
+      "group": "scene",
+      "split": "validation",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 10,
+      "group": "scene",
+      "split": "validation",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 11,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 12,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 13,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 14,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 15,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 16,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 17,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 18,
+      "group": "scene",
+      "split": "validation",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 19,
+      "group": "scene",
+      "split": "validation",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 20,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 21,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 22,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 23,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 24,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 25,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 26,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 27,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 28,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 29,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 30,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 31,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 32,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 33,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 34,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 35,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 36,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 37,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 38,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 39,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 40,
+      "group": "scene",
+      "split": "validation",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 41,
+      "group": "scene",
+      "split": "validation",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 42,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 43,
+      "group": "scene",
+      "split": "validation",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 44,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 45,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 46,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 47,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 48,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 49,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 50,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 51,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 52,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 53,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 54,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 55,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 56,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 57,
+      "group": "scene",
+      "split": "validation",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 58,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 59,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 60,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 61,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 62,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 63,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 64,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 65,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 66,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 67,
+      "group": "scene",
+      "split": "validation",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 68,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 69,
+      "group": "scene",
+      "split": "validation",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 70,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 71,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 72,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 73,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 74,
+      "group": "scene",
+      "split": "validation",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 75,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 76,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 77,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 78,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 79,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 80,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 81,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 82,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 83,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 84,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 85,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 86,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 87,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 88,
+      "group": "scene",
+      "split": "validation",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 89,
+      "group": "scene",
+      "split": "validation",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 90,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 91,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 92,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 93,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 94,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 95,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 96,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 97,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 98,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 99,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 100,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 101,
+      "group": "scene",
+      "split": "validation",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 102,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 103,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 104,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 105,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 106,
+      "group": "scene",
+      "split": "validation",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 107,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 108,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 109,
+      "group": "scene",
+      "split": "train",
+      "source_frames": 478,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.899999618530273
+    },
+    {
+      "episode": 110,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 477,
+      "sampled_frames": 160,
+      "first_time_s": 0.0,
+      "last_time_s": 15.866666793823242
+    },
+    {
+      "episode": 111,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 112,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 113,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 114,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 115,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 116,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 117,
+      "group": "motion",
+      "split": "validation",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 118,
+      "group": "motion",
+      "split": "validation",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 119,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 120,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 121,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 122,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 123,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 124,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 125,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 126,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 127,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 128,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 129,
+      "group": "motion",
+      "split": "validation",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 130,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 131,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 132,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 133,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 134,
+      "group": "motion",
+      "split": "validation",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 135,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 136,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 137,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 138,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 139,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 140,
+      "group": "motion",
+      "split": "validation",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 141,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 142,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 143,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 144,
+      "group": "motion",
+      "split": "validation",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 145,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 146,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 147,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 148,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 149,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 150,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 151,
+      "group": "motion",
+      "split": "validation",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 152,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 153,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 154,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 155,
+      "group": "motion",
+      "split": "validation",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 156,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    },
+    {
+      "episode": 157,
+      "group": "motion",
+      "split": "train",
+      "source_frames": 479,
+      "sampled_frames": 161,
+      "first_time_s": 0.0,
+      "last_time_s": 15.933333396911621
+    }
+  ],
+  "joints": [
+    "shoulder_pan",
+    "shoulder_lift",
+    "elbow_flex",
+    "wrist_flex",
+    "wrist_roll",
+    "gripper"
+  ],
+  "units": "Recorded command-position units, not assumed physical degrees",
+  "source_fps": 30,
+  "plot_fps": 10,
+  "total_source_frames": 75570,
+  "derivation": "Keep every third sample and each episode final sample; timestamps/commands rounded to six decimals. No interpolation or smoothing.",
+  "collection_intent": "Scene/motion descriptions are supplied by the author; membership follows source folders.",
+  "source_sha256": {
+    "meta/info.json": "6c3b056be88eecb2d28e1fe14cddf657af9cdb39ef18a7544594b2d071a225cc",
+    "source_episode_map.json": "691c560242b6f9a8012c74e5b52efe1d75fa8786cabc86c053a312a86de66a99",
+    "split.json": "7a931ef7707477bda7616a264ad3f09bca8d0a76f9a0cd7ee7df12b85b5139c2",
+    "data/chunk-000/file-000.parquet": "b96eac07519de9ee071a4ecf7db40e75f62e2dd59b0b02d20a77f917d81ad548"
+  },
+  "commands_sha256": "026ebb4f31b6eed1843beacbce2f939e64eedb0744000809264dc4cf50adefcf"
+}

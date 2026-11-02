@@ -10,7 +10,7 @@
 
 ## 1. TL;DR
 
-I taught a low-cost robot to pick and place from demonstrations using **ACT**, then worked on chunk scheduling and a controller-side blend filter to make it run on a CPU.
+I taught a low-cost robot to pick and place from demonstrations using **ACT**, then worked on chunk scheduling and a controller-side **blend filter** to make it run on a CPU.
 
 **158 demonstrations · One wrist camera · CPU inference**
 
@@ -28,23 +28,23 @@ I taught a low-cost robot to pick and place from demonstrations using **ACT**, t
 
 ## 3. Introduction — What I did?
 
-The task is simple: pick up a cube and place it at a circle. Getting a learned policy to do it consistently on my SO-101 and Intel N95 NUC was the interesting part.
+The task is simple: "pick up a cube and place it at a circle".
 
-I collected about 200 demonstrations myself and cleaned them into a final dataset of 158 episodes. I trained ACT through LeRobot's official pipeline with 134 training episodes and 24 held-out episodes, selecting the 18,000-step checkpoint. The policy uses one wrist-mounted camera and robot state.
+I collected about 200 demonstrations myself and cleaned them into a final dataset of 158 episodes. I trained ACT through LeRobot's official pipeline with 134 training episodes and 24 held-out episodes, selecting the 18,000-step checkpoint. The policy uses one **wrist-mounted camera and robot state**.
 
-On the NUC, logged inference took a median **321 ms** across 8,300 completed chunks. The robot needs commands while the next inference is running, so I used an asynchronous worker and an overlapping action queue.
+On the NUC, logged policy inference took a median **321 ms** across 8,300 completed chunks. The robot needs commands while the next inference is running, so I used an asynchronous worker and an overlapping action queue.
 
-I observed oscillation and overshoot during deployment. I refined execution with chunk blending, an arm filter and empirical controller checks, then tested filtering and sensitivity to scene changes. ACT and its model implementation come from [the ACT authors](https://arxiv.org/abs/2304.13705) and [LeRobot](https://github.com/huggingface/lerobot); my work is the demonstrations, integration, execution refinements and evaluation.
+The arm shook and overshot during real rollouts, so I added chunk blending, an arm filter and controller checks based on my demonstrations. Then I tested different filter settings and scene changes. ACT and its model implementation come from [the ACT authors](https://arxiv.org/abs/2304.13705) and [LeRobot](https://github.com/huggingface/lerobot). I collected the demonstrations, trained the policy, worked on execution and ran the experiments.
 
 ## 4. Results
 
 ### Experiments
 
-I evaluated **95 distinct primary trials** in 40-second windows. The study covers five α settings, base shifts of ±2 cm and six cube orientations. Groups contain five or ten trials. **α = 1 is the unfiltered baseline.**
+I ran **95 distinct trials**, each lasting up to 40 seconds. I tested five α settings, base shifts of ±2 cm and six cube orientations. Most groups have ten trials; I stopped at five for some scene changes. **α = 1 is the unfiltered baseline.**
 
 ![Three-panel alpha outcome, placement and controller-stop comparison](analysis/2026-11-01/alpha.png)
 
-*Numbers are trial counts. Whiskers show Wilson 95% intervals. Placement includes ranks 4 and 5; return requires rank 5.*
+*Numbers are trial counts.*
 
 | α | Placement | Placed + returned | Controller stops | Placement median (timed n) |
 | --- | --- | --- | --- | --- |
@@ -54,7 +54,15 @@ I evaluated **95 distinct primary trials** in 40-second windows. The study cover
 | 0.8 | 6/10 | 6/10 | 3/10 | 18.97 s (6) |
 | 1.0 | 6/10 | 6/10 | 3/10 | 28.20 s (6) |
 
-The lower-alpha groups avoided controller stops in these trials. The broad intervals leave the best alpha unresolved. Placement times use only existing operator markers; missing measurements stay missing.
+**My take:** Lower alpha made the arm look smoother, and the lower-alpha groups avoided controller stops in my tests. I wouldn't pick a single winner from ten runs per setting, though. The placement times above are my Space-key markers.
+
+### Completion time
+
+![Individual estimated completion times and medians for five alpha settings](analysis/2026-11-02-completion/alpha_completion.png)
+
+*I estimated these times from gripper motion and the return to the starting pose. Dots show timed runs; bars show medians. These estimates haven’t been checked against video. [How I measured them](docs/AUTOMATIC_COMPLETION_TIME.md).*
+
+### Scene changes
 
 ![Base-position and cube-orientation sensitivity](analysis/2026-11-01/scene_sensitivity.png)
 
@@ -82,17 +90,49 @@ The [full report](docs/RESULTS.md) includes individual times, intervals and fail
 
 ### Real-time system diagram
 
-![Runtime, chunk scheduling and controller filter](analysis/2026-11-01/system_runtime.png)
+![ACT image and state processing, asynchronous inference and controller execution](analysis/2026-11-02-readme/runtime_architecture.png)
 
-*The worker predicts while queued commands execute. At readiness, past entries of the arriving chunk expire; future entries blend with older predictions.*
+*The worker predicts a 30-step chunk while the controller keeps executing queued commands. Only the arm and gripper move; base commands stay at zero.*
+
+![Chunk scheduling at source cycle 24 and ready cycle 34, with a separate arm filter](analysis/2026-11-02-readme/scheduling_filter.png)
+
+*A scheduling example: the old queue covers inference time. When the new chunk arrives, its past predictions expire and overlapping future predictions blend.*
 
 I request another chunk about every 12 control frames. Queue blending combines predictions for the **same future cycle**. The α filter smooths commands **over time** across the first five arm channels. The gripper bypasses that filter. Raw checks run before filtering, followed by bounded-target checks.
 
+### Dataset
+
+![Dataset collection groups and their training and validation split](analysis/2026-11-02-readme/dataset_flow.png)
+
+*110 demos with scene variation + 48 with motion variation = 158 demos. The connecting bands show the saved training split.*
+
+In the first 110 demos, I changed the surroundings in the camera view while keeping the motion on the happy path. In the extra 48, I kept the scene stable and deliberately overshot during picking and placing, then recovered.
+
+![All 158 demonstrations overlaid across the six arm and gripper command channels](analysis/2026-11-02-readme/dataset_joint_commands.png)
+
+*Each line is one demonstration, sampled at 10 Hz for plotting. Blue is scene variation; peach is motion variation. These are recorded commands, not measured joint motion.*
+
+This was my first time collecting demos for robot learning. Looking back, I'd include more **motion variation and recovery examples**. I saw some recovery in the hero demo, but it's still weak.
+
 ### Pipeline flow
+
+#### Practice pipeline
+
+![Hands-on practice from robot assembly to supervised trials and review](analysis/2026-11-02-readme/practice_pipeline.png)
+
+*The whole process I worked through. Failed trials sent me back to the scene, demonstrations or policy.*
+
+#### Experiment pipeline
 
 ![Demonstration collection, training, checkpoint selection and deployment](analysis/2026-11-01/pipeline.png)
 
 *From moving the robot myself to training, held-out review and physical evaluation.*
+
+#### Policy deployment
+
+![Mac checkpoint review followed by NUC preflight, shadow testing and supervised rollout](analysis/2026-11-02-readme/policy_deployment.png)
+
+*I checked the checkpoint offline first, then worked through live checks before letting the policy control the arm.*
 
 ### Platform, environment and task definition
 
@@ -108,7 +148,7 @@ Offline predictions looked promising, but physical rollouts exposed problems tha
 
 This was my first demonstration-collection effort, and the data quality and coverage could be better. Labels and placement times are my own observations.
 
-My hypothesis is that inference delay contributes to a mismatch between the observed state and execution state. The current experiments do not isolate that mechanism. Inspecting proposals, commands and measured motion together was more useful than judging the policy from validation loss alone.
+I suspect inference delay is part of the problem: by the time a chunk is ready, the arm has already moved. I haven't isolated that cause in these tests. Looking at predictions, sent commands and measured motion together taught me more than validation loss alone.
 
 ## 7. Reproduction guide
 
@@ -121,11 +161,13 @@ python3 tools/analyze_outcomes.py --output-dir /tmp/mickey17-analysis
 
 The [reproduction guide](docs/REPRODUCE.md) covers the training configuration, offline analysis and hardware dependencies. The evaluated deployment entry point is [rollout_act_overlap.py](deployment/rollout_act_overlap.py).
 
+The new [dataset and system figures](analysis/2026-11-02-readme/README.md) and [completion-time chart](analysis/2026-11-02-completion/README.md) have separate reproduction commands.
+
 ## 8. Limitations and future expansion
 
-This is an exploratory personal study with small groups, manual labels and limited scene variation. Weights, demonstration videos and the exact NUC environment remain external.
+This is a side project with small trial groups, my own labels and limited scene variation. The weights, demonstration videos and full NUC environment aren't included here.
 
-Next I want to improve demonstration coverage, test image and demonstration augmentation, and explore [Real-Time Chunking](https://www.pi.website/research/real_time_chunking) and VLA policies.
+Possible extensions include more varied demonstrations, image and demonstration augmentation, [Real-Time Chunking](https://www.pi.website/research/real_time_chunking), and VLA policies. Those are ideas for later, not work I'm starting now.
 
 ## 9. References
 

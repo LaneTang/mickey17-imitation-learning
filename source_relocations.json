@@ -1,0 +1,66 @@
+{
+  "format_version": 1,
+  "description": "Path-only reorganization; original source hashes remain unchanged. Archived scripts retain historical imports and are not current runnable entry points.",
+  "files": {
+    "deployment/rollout_act.py": {
+      "path": "archive/deployment/rollout_act.py",
+      "sha256": "76b5a7d943838074382381da7bebad6bcbb1d96dab7894e36c424997bd310204"
+    },
+    "deployment/rollout_act_unbounded.py": {
+      "path": "archive/deployment/rollout_act_unbounded.py",
+      "sha256": "8af8bfbbdb028b09e3ff10ebae139cd975624d0f5b71c095bb7ac98a895760dd"
+    },
+    "deployment/rollout_bc.py": {
+      "path": "archive/deployment/rollout_bc.py",
+      "sha256": "3d139b4b9bf80327030f32473f453d8d206214872cd651decfaff17b00385c71"
+    },
+    "deployment/rollout_bc_unbounded.py": {
+      "path": "archive/deployment/rollout_bc_unbounded.py",
+      "sha256": "e45b4569db48389ff271d341b4e0d97c7bfb3c01fe42996c3dae5acbe6502fda"
+    },
+    "deployment/migrate_nuc_layout.sh": {
+      "path": "archive/migration/migrate_nuc_layout.sh",
+      "sha256": "4af370684cfc5e44a2950a99d892634d691486439cb09963d80fbf6cb3546052"
+    },
+    "collect/record_demo_wrist_cam.py": {
+      "path": "archive/collection/record_demo_wrist_cam.py",
+      "sha256": "ef0f553210938f92a0285f0f8614e25039c2d307eb28c318e9c69c353d538aeb"
+    },
+    "collect/plot_episode_commands.py": {
+      "path": "archive/collection/plot_episode_commands.py",
+      "sha256": "d41ca93ee42617ca582c8ee540f051d5ebb042c8267bbdf05426f04c1d8a1b1c"
+    },
+    "demo_collection/record_demo_wrist_cam.py": {
+      "path": "collection/record_demo_wrist_cam.py",
+      "sha256": "dfad8cbff785f60d80df661b14137247bc77430d26cd097d0095817a86fd5beb"
+    },
+    "demo_collection/plot_episode_commands.py": {
+      "path": "collection/plot_episode_commands.py",
+      "sha256": "d41ca93ee42617ca582c8ee540f051d5ebb042c8267bbdf05426f04c1d8a1b1c"
+    },
+    "train/train_bc_direct.py": {
+      "path": "archive/training/bc/train_bc_direct.py",
+      "sha256": "816406619a401b5bb354a397def167c8882341ad507c11e11b3eab047ea3a5a7"
+    },
+    "train/train_bc_residual.py": {
+      "path": "archive/training/bc/train_bc_residual.py",
+      "sha256": "079209e49926d73c667796f639f01c823972eb4a462443c93f75ca6df0db3e2b"
+    },
+    "train/train_bc_future_residual.py": {
+      "path": "archive/training/bc/train_bc_future_residual.py",
+      "sha256": "88e28a10d84b5e58433089d46134ccedfcf7453db18ff87affb2b629aed29d98"
+    },
+    "train/bc_common.py": {
+      "path": "archive/training/bc/bc_common.py",
+      "sha256": "5423c7f2ddb9242865ae605222957c6388c5519317ac9ff63de10a49d8d4c7bd"
+    },
+    "train/train_act.py": {
+      "path": "archive/training/act_arm_only/train_act.py",
+      "sha256": "da4a8f9e12a12fea95968a4a0c576914a68fe0d5f7eca64b59edd13707b3330d"
+    },
+    "train/train_act_latency12.py": {
+      "path": "archive/training/act_arm_only/train_act_latency12.py",
+      "sha256": "e0d1230bd1055f9340737f9e90beaeca8094ee54287cde01d9801c17e6a5f045"
+    }
+  }
+}

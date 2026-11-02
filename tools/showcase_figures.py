@@ -52,6 +52,8 @@ def render_figures(snapshot, summary, out, groups, joints, outcome, wilson):
         fig.savefig(out / f"{name}.png", dpi=180, bbox_inches="tight", pad_inches=.13)
         path = out / f"{name}.svg"
         fig.savefig(path, bbox_inches="tight", pad_inches=.13, metadata={"Date": None})
+        if name == "outcome_flow":
+            path.write_text(path.read_text().replace("font-family: 'DejaVu Sans'", "font-family: 'DejaVu Sans', Arial, sans-serif"))
         path.write_text("\n".join(line.rstrip() for line in path.read_text().splitlines()) + "\n")
         plt.close(fig)
 
@@ -192,52 +194,11 @@ def render_figures(snapshot, summary, out, groups, joints, outcome, wilson):
         raise ValueError("Outcome-flow figure needs an explicit unknown branch for this input")
     assert counts["normal"] == counts["returned"] + counts["placed_only"] + counts["not_placed"]
     assert counts["all"] == counts["normal"] + counts["controller_stops"]
-    fig, ax = plt.subplots(figsize=(12.8, 4.5))
-    ax.set(xlim=(-.04, 1.08), ylim=(-.07, 1.10))
-    ax.axis("off")
-    scale = .008
-    source_bottom = .14
-    source_top = source_bottom + counts["all"] * scale
-    normal_bottom = .306
-    normal_top = normal_bottom + counts["normal"] * scale
-    stop_bottom = .05
-    stop_top = stop_bottom + counts["controller_stops"] * scale
-    def band(x0, y0, x1, y1, height, color):
-        mid = (x0+x1)/2
-        vertices = [(x0,y0), (mid,y0), (mid,y1), (x1,y1), (x1,y1+height),
-                    (mid,y1+height), (mid,y0+height), (x0,y0+height), (x0,y0)]
-        codes = [Path.MOVETO, Path.CURVE4, Path.CURVE4, Path.CURVE4, Path.LINETO,
-                 Path.CURVE4, Path.CURVE4, Path.CURVE4, Path.CLOSEPOLY]
-        ax.add_patch(PathPatch(Path(vertices, codes), facecolor=color, edgecolor="none", alpha=.68))
-    def node(x, bottom, height, color):
-        ax.add_patch(Rectangle((x,bottom), .012, height, facecolor=color, edgecolor="none"))
-    node(0, source_bottom, counts["all"]*scale, BLUE_DARK)
-    band(.012, source_bottom+counts["controller_stops"]*scale, .48, normal_bottom, counts["normal"]*scale, BLUE)
-    band(.012, source_bottom, .48, stop_bottom, counts["controller_stops"]*scale, ROSE)
-    node(.48, normal_bottom, counts["normal"]*scale, BLUE_DARK)
-    node(.48, stop_bottom, counts["controller_stops"]*scale, ROSE_DARK)
-    # Low to high at the normal node: unsuccessful, placed-only, returned.
-    bottom = normal_bottom
-    destinations = [("not_placed", .23, GRAY, "Not placed"),
-                    ("placed_only", .59, PEACH, "Placed, not returned"),
-                    ("returned", .66, BLUE, "Placed + returned")]
-    for key, dest, color, label in destinations:
-        height = counts[key] * scale
-        band(.492, bottom, 1.0, dest, height, color)
-        node(1.0, dest, height, color if key != "returned" else BLUE_DARK)
-        text_y = dest+height/2 if key != "placed_only" else dest+.025
-        ax.text(.985, text_y, f"{label}\n{counts[key]}/{counts['all']} · {100*counts[key]/counts['all']:.1f}%",
-                ha="right", va="center", fontsize=11, color=INK)
-        bottom += height
-    band(.492, stop_bottom, 1., stop_bottom, counts["controller_stops"]*scale, ROSE)
-    node(1., stop_bottom, counts["controller_stops"]*scale, ROSE_DARK)
-    ax.text(.985, (stop_top+stop_bottom)/2, f"Phase not ranked\n{counts['controller_stops']}/{counts['all']} · controller stops",
-            ha="right", va="center", fontsize=11)
-    ax.text(.025, .53, f"All primary trials\n{counts['all']} unique IDs", fontsize=12, va="center")
-    ax.text(.465, normal_top-.10, f"Normal time-limit ending\n{counts['normal']}/{counts['all']}", ha="right", fontsize=11, va="center")
-    ax.text(.465, stop_bottom+.06, f"Controller stop\n{counts['controller_stops']}/{counts['all']}", ha="right", fontsize=11, va="center")
-    ax.text(0, 1.045, "Where the trials ended", fontsize=14, fontweight="bold")
-    ax.text(0, -.025, "Pooled across experimental conditions · shared baselines counted once · band width = trial count",
+    from flow_figures import outcome_flow
+    fig, ax = plt.subplots(figsize=(12.8, 7.4))
+    outcome_flow(ax, counts)
+    ax.text(.012, 1.31, "Where the trials ended", fontsize=16, fontweight="bold")
+    ax.text(.012, .015, "95 unique primary trials · percentages of all trials · pooled across conditions",
             fontsize=10, color=MUTED)
     save(fig, "outcome_flow")
 

@@ -2,7 +2,7 @@
 
 ## 1. TL;DR
 
-Teaching a low-cost robot to pick and place from demonstrations by **ACT** with only one local camera, then making the learned policy work under real inference latency.
+Teaching a low-cost robot to pick and place from demonstrations by **ACT** with only one local camera, then introduce a **blend filter** making the learned policy work under real inference latency.
 
 ## 2. Hero Demo
 
@@ -61,7 +61,8 @@ A rollout terminated by a controller tolerance violation will be recorded as an 
 ### Real time system diagram
 
 1. of data flow
-2. of blending mechanism and the blend filter
+2. of blending mechanism by blend filter
+3. of a typical blending scheduling
 
 ### Pipeline flow
 

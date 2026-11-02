@@ -49,7 +49,7 @@ independently authenticating raw observations requires the local archive.
 ## Training provenance
 
 The deployed zero-offset ACT is step **018000** from a **20,000-step** official
-LeRobot training run. The earlier `train/train_act.py` wrapper is a separate
+LeRobot training run. The earlier `archive/training/act_arm_only/train_act.py` wrapper is a separate
 six-channel experiment and does not describe this checkpoint. Saved
 [training settings](../evidence/2026-11-01/train_config.json),
 [policy settings](../evidence/2026-11-01/config.json) and
@@ -74,6 +74,11 @@ processors and demonstration videos remain local, so this checkout alone
 cannot reproduce model training or policy inference.
 
 ## Evaluated deployment
+
+For a separate label-independent estimate of the full place-and-return time,
+see [automatic completion-time analysis](AUTOMATIC_COMPLETION_TIME.md).
+It detects observed-motion candidates from raw logs; it does not replace the
+published placement markers or verify cube placement visually.
 
 The entry point is **`deployment/rollout_act_overlap.py`**. Other rollout scripts
 are development history. The requested control rate is 30 Hz; a worker runs
@@ -125,6 +130,21 @@ machine-specific preflight. This showcase work performs no hardware operation,
 training or deployment-behavior change.
 
 ## Media
+
+The added README system, workflow and dataset illustrations can be regenerated
+from their [compact snapshot](../evidence/2026-11-02-dataset/README.md):
+
+```bash
+python3 tools/build_readme_figures.py --output-dir /tmp/mickey17-readme-figures
+python3 tools/plot_completion_times.py \
+  --input analysis/2026-11-02-completion/alpha_completion_data.json \
+  --output-dir /tmp/mickey17-completion-figures
+```
+
+These use the same analysis environment as the November 1 plots. The dataset
+snapshot omits images and retains six command channels at nominal 10 Hz.
+Its export path additionally requires PyArrow; figure rendering does not.
+The completion chart remains separate from the operator-marked placement times.
 
 With the original local `assets/demo_alpha0.2.MOV`, `demo_alpha0.5.MOV` and
 `demo_alpha1.MOV`, the local `assets/showcase_in_alpha_0.5.mp4`, analysis

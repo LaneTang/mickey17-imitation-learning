@@ -1,3 +1,11 @@
+# Historical command notebook
+
+This notebook retains commands from earlier development stages. Some scripts
+have moved into `archive/` and the NUC collection scripts are now in
+`collection/`; old commands below are not current runnable instructions.
+Use [docs/REPRODUCE.md](docs/REPRODUCE.md) for the current workflow and
+[archive/README.md](archive/README.md) for the relocation explanation.
+
 # Mikey17 imitation-learning command sheet
 
 This is the **patch-4 command sheet** for the current six-joint BC and ACT

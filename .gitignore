@@ -41,3 +41,8 @@ __pycache__/
 /assets/demo_alpha*.MOV
 /assets/IMG_0291.MOV
 /assets/showcase_in_alpha_0.5.mp4
+
+# Local design references; the finished vector figures are published instead.
+/image.png
+/NBMetadataCache.png
+/NBMetadataCache 2.png

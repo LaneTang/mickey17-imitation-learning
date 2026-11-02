@@ -16,6 +16,13 @@ The verifier reports unchanged NUC files and separately verifies explicitly reco
 
 ## Local work and archives
 
+The archival reorganization is recorded in `source_relocations.json`.
+Original NUC hashes are unchanged; the verifier resolves their original paths
+through this separate map. Every moved file retains its original bytes.
+Historical rollout/training alternatives are under `archive/`; the NUC
+collection scripts are now under `collection/`. The final runtime and all
+its current import dependencies remain at their original paths.
+
 The Mac project supplied collection/training wrappers, review code, assets and documentation beyond the deployment-only NUC download. Matching source paths used the NUC version during synchronization. The five overwritten Mac versions remain in the original workspace's `analysis/2026-10-30/mac-before-nuc-sync/`, outside this repository; original workspace files were not deleted.
 
 The author's starting README and experiment statement are archived verbatim under [docs/archive](archive/README.md), with their starting hashes. The reconciled experiment statement records the author's clarified 0–5 rubric, including rank 4 = placed but not returned. The rollout's historical prompt is documented separately and has not been silently changed.
