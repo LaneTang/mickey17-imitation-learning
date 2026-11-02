@@ -177,4 +177,4 @@ Possible extensions include more varied demonstrations, image and demonstration 
 
 [ACT paper](https://arxiv.org/abs/2304.13705) · [LeRobot ACT documentation](https://huggingface.co/docs/lerobot/act) · [Attribution](docs/THIRD_PARTY_NOTICES.md) · [Source provenance](docs/SOURCE_OF_TRUTH.md)
 
-I used Codex to help with code, analysis and presentation. The overall structure, method of pushing research into real, robot work, observations are mine(Codex was always told me to recollect data or redesign the policy, bruhhh).
+I used Codex to help with code, analysis and presentation. The overall structure, method of pushing research into real, robot work, observations are mine(Codex always told me to recollect data or redesign the policy, bruhhh).
