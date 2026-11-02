@@ -20,3 +20,4 @@ bytes without replacing the author's later edits.
 | Original | Archived file | SHA-256 |
 | --- | --- | --- |
 | README.md (annotated revision) | README-author-draft-2026-11-02-before-polish.md | `a391bd759999c4eb38975e5f011733a682af0f37c07ce3612e075f75b257d364` |
+| README.md (failure-media notes) | README-author-failure-notes-2026-11-02.md | `0b4c951f009ef5ae0492226fa27110f74cea6f0a163f7c1b12d8ff17519d5a46` |

@@ -142,3 +142,30 @@ markers were visually checked before and after both shorter clips end.
 The GIF rebuilds byte-for-byte from the public MP4. Existing recordings and
 their previews remain unchanged; all 30 tests pass. The README, Demo navigation
 and Pages entry redirect now lead to the comparison player.
+
+### New oscillation and failure recordings
+
+The three-alpha comparison now uses `IMG_0375_oscillation.MOV` for its right
+panel; left/middle source files and their start alignment are unchanged.
+The Results section adds a two-panel comparison of the author's overextension
+and proposal-step-stop recordings. The failure names come from the author;
+no matching raw trial logs were supplied. These are selected examples and do
+not change the 95-trial study, its outcomes or timing data.
+
+The complete sources are retained: 24.698333 s for oscillation, 33.83 s for
+overextension and 7.9317 s for the stop recording. Public videos preserve the
+full field of view and original speed, omit audio and location metadata, and
+hold/mark ended clips. Source hashes are recorded in media provenance; the
+three original MOVs remain unchanged locally and excluded from publication.
+
+Both GIFs use 840 px width and 8 fps under 10 MiB: hero 225 frames / 28.13 s,
+failures 271 frames / 33.88 s. All frame boundaries preserve the nominal
+timeline within 5 ms; total durations differ from their MP4s by less than one
+sampled frame. Both rebuild byte-for-byte from the public MP4s. Their README
+rendering was checked at 838 px, as was native video playback on the new
+failure page. All 30 tests and source verification pass. All existing study
+artifacts and single-demo recordings retain their previous bytes.
+
+The author's annotated README was archived verbatim before replacing its new
+failure-media placeholder; the "This is it!" heading is preserved. The unrelated
+local deletion of `Roadmap.md` is left outside this media update.

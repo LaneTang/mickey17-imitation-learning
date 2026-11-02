@@ -40,6 +40,9 @@ __pycache__/
 # Preserve supplied camera originals locally; publish the compressed comparison.
 /assets/demo_alpha*.MOV
 /assets/IMG_0291.MOV
+/assets/IMG_0371_overextention.MOV
+/assets/IMG_0375_oscillation.MOV
+/assets/IMG_0380_ACT proposal changed too far in one cycle.MOV
 /assets/showcase_in_alpha_0.5.mp4
 
 # Local design references; the finished vector figures are published instead.

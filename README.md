@@ -14,11 +14,11 @@ I taught a low-cost robot to pick and place from demonstrations using **ACT**, t
 
 **158 demonstrations · One wrist camera · CPU inference**
 
-## 2. Hero Demo
+## 2. This is it!
 
-<a href="https://lanetang.github.io/mickey17-imitation-learning/media/comparison.html"><img src="assets/alpha_comparison.gif" width="900" alt="Three independent robot demos, left to right: alpha 0.2, 0.5 and 1.0, with elapsed video time and clip-end markers"></a>
+<a href="https://lanetang.github.io/mickey17-imitation-learning/media/comparison.html"><img src="assets/alpha_comparison.gif" width="900" alt="Three independent robot demos, left to right: alpha 0.2, 0.5 and the new alpha 1.0 oscillation example"></a>
 
-*α = 0.2, 0.5 and 1.0, left to right. Independent demos at original speed; ended clips freeze and are marked. These are illustrative recordings, not synchronized trials.*
+*α = 0.2, 0.5 and 1.0, left to right. The right-hand clip shows oscillation at α = 1. Independent demos at original speed; ended clips freeze and are marked. These are illustrative recordings, not synchronized trials.*
 
 **[Watch the full comparison](https://lanetang.github.io/mickey17-imitation-learning/media/comparison.html)** · [Single α = 0.5 recording](https://lanetang.github.io/mickey17-imitation-learning/media/landscape.html) · [Another recording, from the front](https://lanetang.github.io/mickey17-imitation-learning/media/hero.html)
 
@@ -57,6 +57,14 @@ I ran **95 distinct trials**, each lasting up to 40 seconds. I tested five α se
 ![Individual estimated completion times and medians for five alpha settings](analysis/2026-11-02-completion/alpha_completion.png)
 
 *I estimated these times from gripper motion and the return to the starting pose. Dots show timed runs; bars show medians. These estimates haven’t been checked against video. [How I measured them](docs/AUTOMATIC_COMPLETION_TIME.md).*
+
+### Typical failure
+
+<a href="https://lanetang.github.io/mickey17-imitation-learning/media/failures.html"><img src="assets/failure_examples.gif" width="900" alt="Two alpha 1 failure examples: overextension on the left and a proposal-step stop on the right"></a>
+
+*Two α = 1 failures I ran into: overextension on the left, and a proposal-step stop on the right. Independent recordings at original speed, separate from the 95-trial study.*
+
+[Watch the full recordings](https://lanetang.github.io/mickey17-imitation-learning/media/failures.html).
 
 ### Scene changes
 

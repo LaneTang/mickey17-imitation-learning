@@ -132,6 +132,11 @@ training or deployment-behavior change.
 ## Media
 
 The README hero is a side-by-side GIF: α = 0.2, 0.5, 1.0 from left to right.
+The α = 1 panel now uses `IMG_0375_oscillation.MOV`. The Results section adds
+two selected α = 1 examples: `IMG_0371_overextention.MOV` and
+`IMG_0380_ACT proposal changed too far in one cycle.MOV`.
+These recordings illustrate observed behaviors; they are not added to the
+95-trial study or assigned its trial IDs.
 It reuses the public comparison MP4, including video-time labels and clip-end
 markers. The full field of view, independent clip starts and original speed
 are preserved. Rebuild just this preview without the original camera files:
@@ -140,9 +145,17 @@ are preserved. Rebuild just this preview without the original camera files:
 python3 tools/build_showcase_media.py --comparison-gif-only
 ```
 
+To rebuild both GIFs using only the public MP4s:
+
+```bash
+python3 tools/build_showcase_media.py --previews-only
+```
+
 This needs FFmpeg, Pillow and Matplotlib, as does the full media builder.
 The GIF samples at 8 fps with alternating 120/130 ms frame durations to retain
-real-time playback in GIF's centisecond timing format. The full MP4 comparison
+real-time playback in GIF's centisecond timing format. Preview width is reduced
+from 900 px only as needed to stay under 10 MiB; the current two GIFs are 840 px
+wide. Full-resolution labeled MP4s remain available. The full MP4 comparison
 and both single-recording players remain available.
 
 The added README system, workflow and dataset illustrations can be regenerated
@@ -160,13 +173,17 @@ snapshot omits images and retains six command channels at nominal 10 Hz.
 Its export path additionally requires PyArrow; figure rendering does not.
 The completion chart remains separate from the operator-marked placement times.
 
-With the original local `assets/demo_alpha0.2.MOV`, `demo_alpha0.5.MOV` and
-`demo_alpha1.MOV`, the local `assets/showcase_in_alpha_0.5.mp4`, analysis
+With the original local `assets/demo_alpha0.2.MOV`, `demo_alpha0.5.MOV`, the
+three new `IMG_03*.MOV` recordings named above, the local
+`assets/showcase_in_alpha_0.5.mp4`, analysis
 dependencies, Pillow with WebP support and FFmpeg/ffprobe with libx264:
 
 ```bash
 python3 tools/build_showcase_media.py
 ```
+
+To update just the hero/failure comparisons from those originals, leaving the
+single-demo media untouched, use `--update-comparisons`.
 
 The comparison preserves speed, starts each independent clip at its own zero,
 displays video time, holds and marks ended clips, and omits audio. Originals
@@ -185,7 +202,7 @@ with 100 ms frame durations. This reduces the frame rate without speeding up
 the motion. Source hashes and transformations are recorded in media provenance.
 The original short, front-view demonstration remains available separately.
 
-The three static pages in `media/` provide browser playback via GitHub Pages,
+The four static pages in `media/` provide browser playback via GitHub Pages,
 which serves MP4 MIME types correctly. GitHub's repository file viewer does
 not play these videos. The pages can also be served locally with Python's
 `http.server`; they require no build system or JavaScript.

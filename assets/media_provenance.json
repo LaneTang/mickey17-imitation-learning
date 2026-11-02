@@ -1,33 +1,38 @@
 {
   "comparison": {
+    "file": "alpha_comparison.mp4",
     "fps": 30,
     "speed": 1,
     "audio": "omitted",
     "alignment": "independent clip starts",
+    "processing": "Full field of view; no trimming; audio and metadata omitted; ended clips freeze and are marked",
     "sources": [
       {
         "file": "demo_alpha0.2.MOV",
+        "label": "\u03b1 = 0.2",
         "sha256": "606a2f3f77455f50b783936d10de004908c3f25087811cec02689276021631cb",
         "duration_s": 24.198333
       },
       {
         "file": "demo_alpha0.5.MOV",
+        "label": "\u03b1 = 0.5",
         "sha256": "995ccf0c4535a39a3fefbd5c80587c21505829d1bd9039680b671c5c77b3fe38",
         "duration_s": 28.063333
       },
       {
-        "file": "demo_alpha1.MOV",
-        "sha256": "741267e2d0303d483f976ad66b76292e0261306f990943a75b615ba4a693f187",
-        "duration_s": 18.465
+        "file": "IMG_0375_oscillation.MOV",
+        "label": "\u03b1 = 1.0 \u00b7 oscillation",
+        "sha256": "a925415ade5208a28e6b9b471cc79e5c1b9b076c6dd8f069e86707544dbe14bc",
+        "duration_s": 24.698333
       }
     ],
     "preview": {
       "file": "alpha_comparison.gif",
       "source": "alpha_comparison.mp4",
-      "source_sha256": "32ff3eceb1c4581395de55b3ada9ade32aa35ae2cb66acdf3b726b0f2dcec72e",
-      "sha256": "82dee8960374cd07d0155ef185368ed213cd760829fef40cf81597141d674e77",
-      "width": 900,
-      "height": 231,
+      "source_sha256": "5d18b29eef144ab2521a95d5991c913bad60b4742465a48e8f6bef94b1aa21bc",
+      "sha256": "94b123550b6844c28e0e054b529b738a59e550547b75bb9495b650b5406587cf",
+      "width": 840,
+      "height": 216,
       "fps": 8,
       "frames": 225,
       "duration_s": 28.13,
@@ -36,7 +41,7 @@
         130
       ],
       "speed": 1,
-      "processing": "Full comparison at 8 fps, 900px wide, 128-color palette without dithering; alternating 120/130ms frames preserve original speed; independent starts and existing clip-end markers preserved"
+      "processing": "Full comparison at 8 fps, 840px wide, 128-color palette without dithering; alternating 120/130ms frames preserve original speed; independent starts and existing clip-end markers preserved"
     }
   },
   "hero": {
@@ -60,5 +65,45 @@
       "speed": 1,
       "poster_at_s": 12
     }
+  },
+  "failures": {
+    "file": "failure_examples.mp4",
+    "fps": 30,
+    "speed": 1,
+    "audio": "omitted",
+    "alignment": "independent clip starts",
+    "processing": "Full field of view; no trimming; audio and metadata omitted; ended clips freeze and are marked",
+    "sources": [
+      {
+        "file": "IMG_0371_overextention.MOV",
+        "label": "\u03b1 = 1 \u00b7 Overextension",
+        "sha256": "2bfc1ba9a2f4343fc42f825be9b8e52fbb7cf6c6c951cdf45f3a33e579020305",
+        "duration_s": 33.83
+      },
+      {
+        "file": "IMG_0380_ACT proposal changed too far in one cycle.MOV",
+        "label": "\u03b1 = 1 \u00b7 Proposal-step stop",
+        "sha256": "ba15565d5bbc967f22ce80e1069f085b2c7fafb7d88b3760733f47610449e9da",
+        "duration_s": 7.9317
+      }
+    ],
+    "preview": {
+      "file": "failure_examples.gif",
+      "source": "failure_examples.mp4",
+      "source_sha256": "b30157e1ba42d44edd2c999972fe6c36964eca596105841d820c007fb3ea7087",
+      "sha256": "d87c9fca5c09d3fb7f34331fdc718d763e4a391aeb449ff585c79cef36c1e0d2",
+      "width": 840,
+      "height": 324,
+      "fps": 8,
+      "frames": 271,
+      "duration_s": 33.88,
+      "frame_durations_ms": [
+        120,
+        130
+      ],
+      "speed": 1,
+      "processing": "Full comparison at 8 fps, 840px wide, 128-color palette without dithering; alternating 120/130ms frames preserve original speed; independent starts and existing clip-end markers preserved"
+    },
+    "classification_note": "Failure names supplied by the author; these videos are illustrative and are not added to the 95-trial study or matched to its trial IDs."
   }
 }
