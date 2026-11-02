@@ -20,7 +20,24 @@
         "sha256": "741267e2d0303d483f976ad66b76292e0261306f990943a75b615ba4a693f187",
         "duration_s": 18.465
       }
-    ]
+    ],
+    "preview": {
+      "file": "alpha_comparison.gif",
+      "source": "alpha_comparison.mp4",
+      "source_sha256": "32ff3eceb1c4581395de55b3ada9ade32aa35ae2cb66acdf3b726b0f2dcec72e",
+      "sha256": "82dee8960374cd07d0155ef185368ed213cd760829fef40cf81597141d674e77",
+      "width": 900,
+      "height": 231,
+      "fps": 8,
+      "frames": 225,
+      "duration_s": 28.13,
+      "frame_durations_ms": [
+        120,
+        130
+      ],
+      "speed": 1,
+      "processing": "Full comparison at 8 fps, 900px wide, 128-color palette without dithering; alternating 120/130ms frames preserve original speed; independent starts and existing clip-end markers preserved"
+    }
   },
   "hero": {
     "file": "hero_demo.mp4",

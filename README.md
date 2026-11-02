@@ -4,7 +4,7 @@
 
 **My imitation learning practice**
 
-[Demo](https://lanetang.github.io/mickey17-imitation-learning/media/landscape.html) · [Results](#4-results) · [System](#5-about-this-system) · [Reproduce](#7-reproduction-guide)
+[Demo](https://lanetang.github.io/mickey17-imitation-learning/media/comparison.html) · [Results](#4-results) · [System](#5-about-this-system) · [Reproduce](#7-reproduction-guide)
 
 </div>
 
@@ -16,15 +16,11 @@ I taught a low-cost robot to pick and place from demonstrations using **ACT**, t
 
 ## 2. Hero Demo
 
-<a href="https://lanetang.github.io/mickey17-imitation-learning/media/landscape.html"><img src="assets/landscape_demo.webp" width="900" alt="Mickey17 reaches, picks up the cube, places it at the target circle and returns"></a>
+<a href="https://lanetang.github.io/mickey17-imitation-learning/media/comparison.html"><img src="assets/alpha_comparison.gif" width="900" alt="Three independent robot demos, left to right: alpha 0.2, 0.5 and 1.0, with elapsed video time and clip-end markers"></a>
 
-*Pick, transport, place, return. Supervised α = 0.5 demonstration at original speed.*
+*α = 0.2, 0.5 and 1.0, left to right. Independent demos at original speed; ended clips freeze and are marked. These are illustrative recordings, not synchronized trials.*
 
-**[Watch the full recording](https://lanetang.github.io/mickey17-imitation-learning/media/landscape.html)** · [Another recording, from the front](https://lanetang.github.io/mickey17-imitation-learning/media/hero.html)
-
-[![Independent recordings at alpha 0.2, 0.5 and 1.0](assets/alpha_comparison_poster.jpg)](https://lanetang.github.io/mickey17-imitation-learning/media/comparison.html)
-
-*[Compare three α settings](https://lanetang.github.io/mickey17-imitation-learning/media/comparison.html). Independent illustrative recordings at real-time speed, with elapsed video time and marked clip endings.*
+**[Watch the full comparison](https://lanetang.github.io/mickey17-imitation-learning/media/comparison.html)** · [Single α = 0.5 recording](https://lanetang.github.io/mickey17-imitation-learning/media/landscape.html) · [Another recording, from the front](https://lanetang.github.io/mickey17-imitation-learning/media/hero.html)
 
 ## 3. Introduction — What I did?
 

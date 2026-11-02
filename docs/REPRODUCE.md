@@ -131,6 +131,20 @@ training or deployment-behavior change.
 
 ## Media
 
+The README hero is a side-by-side GIF: α = 0.2, 0.5, 1.0 from left to right.
+It reuses the public comparison MP4, including video-time labels and clip-end
+markers. The full field of view, independent clip starts and original speed
+are preserved. Rebuild just this preview without the original camera files:
+
+```bash
+python3 tools/build_showcase_media.py --comparison-gif-only
+```
+
+This needs FFmpeg, Pillow and Matplotlib, as does the full media builder.
+The GIF samples at 8 fps with alternating 120/130 ms frame durations to retain
+real-time playback in GIF's centisecond timing format. The full MP4 comparison
+and both single-recording players remain available.
+
 The added README system, workflow and dataset illustrations can be regenerated
 from their [compact snapshot](../evidence/2026-11-02-dataset/README.md):
 
@@ -164,7 +178,7 @@ metadata. Original videos remain unchanged locally and are excluded from the
 current published tree. Earlier repository commits contained two source videos;
 this update does not rewrite existing Git history.
 
-The landscape α = 0.5 recording supplies the README opening. Its complete MP4
+The landscape α = 0.5 recording remains available separately. Its complete MP4
 is resized to 1280 px with the full field of view and original speed; audio
 and metadata are omitted. The inline animated WebP is 900 px wide at 10 fps,
 with 100 ms frame durations. This reduces the frame rate without speeding up

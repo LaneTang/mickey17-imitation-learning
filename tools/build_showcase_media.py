@@ -21,11 +21,44 @@ def probe(path):
         "ffprobe", "-v", "error", "-show_format", "-show_streams", "-of", "json", str(path)]))
 
 
+def build_comparison_gif(assets):
+    """Reuse the labeled public MP4; sample frames without changing speed."""
+    source = assets / "alpha_comparison.mp4"
+    output = assets / "alpha_comparison.gif"
+    filters = ("fps=8,scale=900:-1:flags=lanczos,split[a][b];"
+               "[a]palettegen=max_colors=128:stats_mode=diff[p];"
+               "[b][p]paletteuse=dither=none:diff_mode=rectangle")
+    subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(source),
+                    "-filter_complex", filters, "-an", "-map_metadata", "-1", "-loop", "0",
+                    str(output)], check=True)
+    with Image.open(output) as image:
+        frames = image.n_frames
+        durations = []
+        for index in range(frames):
+            image.seek(index)
+            durations.append(image.info["duration"])
+        width, height = image.size
+    return {"file": output.name, "source": source.name,
+            "source_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
+            "sha256": hashlib.sha256(output.read_bytes()).hexdigest(),
+            "width": width, "height": height, "fps": 8, "frames": frames,
+            "duration_s": sum(durations) / 1000, "frame_durations_ms": sorted(set(durations)), "speed": 1,
+            "processing": "Full comparison at 8 fps, 900px wide, 128-color palette without dithering; alternating 120/130ms frames preserve original speed; independent starts and existing clip-end markers preserved"}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--assets-dir", type=Path, default=Path(__file__).resolve().parents[1] / "assets")
+    parser.add_argument("--comparison-gif-only", action="store_true",
+                        help="Create the README GIF from the existing public comparison MP4; no originals needed")
     args = parser.parse_args()
     assets = args.assets_dir
+    if args.comparison_gif_only:
+        manifest_path = assets / "media_provenance.json"
+        manifest = json.loads(manifest_path.read_text())
+        manifest["comparison"]["preview"] = build_comparison_gif(assets)
+        manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
+        return
     landscape_source = assets / "demo_alpha0.5.MOV"
     landscape_public = assets / "landscape_demo.mp4"
     subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(landscape_source),
@@ -110,6 +143,7 @@ def main():
         "preview": {"file": "landscape_demo.webp", "fps": 10, "width": 900,
                     "speed": 1, "poster_at_s": 12},
     }
+    manifest["comparison"]["preview"] = build_comparison_gif(assets)
     (assets/"media_provenance.json").write_text(json.dumps(manifest, indent=2) + "\n")
 
 

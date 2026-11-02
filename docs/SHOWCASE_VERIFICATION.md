@@ -130,3 +130,15 @@ the archive index records both exact hashes. SVG trailing whitespace and CSV
 line endings were normalized by their generators without changing values or
 PNG rendering. Earlier "local only" notes describe the state before this
 publication pass; the user subsequently authorized committing and pushing.
+
+### Three-demo hero follow-up
+
+At the author's request, the inline hero now combines α = 0.2, 0.5 and 1.0
+left to right, using the already published comparison MP4. The GIF is 900 ×
+231, 225 frames, 28.13 seconds and 10,073,922 bytes (under 10 MiB). Alternating
+120/130 ms frame delays preserve an 8 fps timeline to within 5 ms; total length
+is within one sampled frame of the MP4. Alpha labels, video times and ended-clip
+markers were visually checked before and after both shorter clips end.
+The GIF rebuilds byte-for-byte from the public MP4. Existing recordings and
+their previews remain unchanged; all 30 tests pass. The README, Demo navigation
+and Pages entry redirect now lead to the comparison player.
