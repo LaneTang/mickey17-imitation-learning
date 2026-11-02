@@ -1,6 +1,6 @@
 # Showcase verification · 2026-11-02
 
-The showcase was checked locally before publication using Python 3.12.13,
+The first showcase was checked locally before publication using Python 3.12.13,
 NumPy 2.2.6, Matplotlib 3.11.2 and the installed FFmpeg/ffprobe.
 
 - Verified archive SHA-256; original raw files were read, not edited.
@@ -37,3 +37,34 @@ NumPy 2.2.6, Matplotlib 3.11.2 and the installed FFmpeg/ffprobe.
 These checks establish reproducible analysis and presentation, not new robot
 success measurements or a complete hardware/training environment. See
 [limitations](RESULTS.md#limits) and [reproduction scope](REPRODUCE.md).
+
+## Visual revision · 2026-11-02
+
+The revision restores the author's nine-section README skeleton, using the
+subsequently edited author draft without changing it. That local draft edit
+is excluded from the showcase commit; the published historical archive remains
+unchanged. The README has approximately 830 words, excluding its table and commands.
+
+The revision adds a full-field-of-view landscape recording and an inline
+animated WebP preview, plus scientific figures in pastel colors with shared
+legends and labeled panels. The analysis entry point, evidence schema and
+numerical outputs are unchanged. The ten PNG/SVG figures include a pooled
+outcome flow, runtime/scheduling/filter schematic and collection-to-deployment
+pipeline. Vector text remains editable.
+
+Additional verification covers:
+
+- Outcome conservation: 95 = 78 normal time-limit endings + 17 controller
+  stops; 78 = 40 returned + one placed-only + 37 not placed. Controller stops
+  are never assigned guessed phase progress. All 20 hardware-free tests pass.
+- The worked scheduling example follows the actual queue: at cycle 34, ten
+  new predictions from source cycle 24 have expired; overlapping predictions
+  ramp from new weight 0.7/6 to 0.7 over six cycles, and new-only targets use 1.0.
+- Original evidence, source hashes, runtime script, existing numerical outputs
+  and the author's edited draft retain their starting hashes for this revision.
+- The 281-frame WebP has 100 ms frame durations, lasts 28.1 s and preserves the
+  source's original speed to within one 10 fps sample. The 1280 px MP4 retains
+  the full field of view, with audio and location metadata omitted.
+- All 24 current analysis artifacts regenerate byte-for-byte from a clean
+  checkout and the public snapshot. Figures and media are visually inspected;
+  documentation links and the live player are checked before delivery.

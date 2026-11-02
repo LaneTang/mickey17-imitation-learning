@@ -1,84 +1,134 @@
-# Mickey17 · learning to pick and place
+<div align="center">
 
-I taught a low-cost robot to pick up a cube and place it at a target circle using **Action Chunking with Transformers (ACT)**. I collected the demonstrations, trained the policy, made it run on a CPU, and tested what happens when I change the controller filter or the scene.
+# Mickey17
 
-<a href="https://lanetang.github.io/mickey17-imitation-learning/media/hero.html"><img src="assets/hero_poster.jpg" width="280" alt="Mickey17 grasping the cube — click to watch the successful demonstration"></a>
+**My imitation learning practice**
 
-**[Watch the demo · MP4, 24 s](https://lanetang.github.io/mickey17-imitation-learning/media/hero.html)**
+[Demo](https://lanetang.github.io/mickey17-imitation-learning/media/landscape.html) · [Results](#4-results) · [System](#5-about-this-system) · [Reproduce](#7-reproduction-guide)
 
-*Successful supervised rollout at α = 0.5. A hand steadies the base during this recording.*
+</div>
 
-## What I built
+## 1. TL;DR
 
-I wanted to work through the whole pipeline, from moving the robot myself to understanding its successes and failures.
+I taught a low-cost robot to pick and place from demonstrations using **ACT**, then worked on chunk scheduling and a controller-side blend filter to make it run on a CPU.
 
-- **Demonstrations:** leader–follower teleoperation, wrist-camera recording, cleaning and merging a final set of 158 demonstrations.
-- **Training:** ACT through LeRobot's official training pipeline, with 134 training episodes and 24 held-out episodes. I selected the 18,000-step checkpoint.
-- **CPU deployment:** asynchronous inference and an action queue that keeps executing while the next chunk is predicted.
-- **Controller refinement:** overlapping-chunk blending, an arm command filter, and empirical execution limits.
-- **Evaluation:** repeated physical trials, operator progress labels, placement timing, controller logs and reproducible analysis.
+**158 demonstrations · One wrist camera · CPU inference**
 
-ACT and the model implementation come from [the ACT authors](https://arxiv.org/abs/2304.13705) and [Hugging Face LeRobot](https://github.com/huggingface/lerobot). My work is the task, data, integration, deployment refinements and experiments around them.
+## 2. Hero Demo
 
-## Results
+<a href="https://lanetang.github.io/mickey17-imitation-learning/media/landscape.html"><img src="assets/landscape_demo.webp" width="900" alt="Mickey17 reaches, picks up the cube, places it at the target circle and returns"></a>
 
-I evaluated **95 distinct primary trials** over 40-second windows. Placement means the cube was placed; placement plus return also requires the arm to return. Circle-overlap quality is a separate label.
+*Pick, transport, place, return. Supervised α = 0.5 demonstration at original speed.*
 
-![Filtering results with Wilson 95% intervals](analysis/2026-11-01/alpha.png)
+**[Watch the full recording](https://lanetang.github.io/mickey17-imitation-learning/media/landscape.html)** · [Another recording, from the front](https://lanetang.github.io/mickey17-imitation-learning/media/hero.html)
 
-*Filtering changes execution behavior. Dots show observed success, bars show Wilson 95% intervals, and the lower panel counts controller stops.*
+[![Independent recordings at alpha 0.2, 0.5 and 1.0](assets/alpha_comparison_poster.jpg)](https://lanetang.github.io/mickey17-imitation-learning/media/comparison.html)
 
-| Arm filter α | Placement | Placement + return | Controller stops | Placement time: median (timed n) |
+*[Compare three α settings](https://lanetang.github.io/mickey17-imitation-learning/media/comparison.html). Independent illustrative recordings at real-time speed, with elapsed video time and marked clip endings.*
+
+## 3. Introduction — What I did?
+
+The task is simple: pick up a cube and place it at a circle. Getting a learned policy to do it consistently on my SO-101 and Intel N95 NUC was the interesting part.
+
+I collected about 200 demonstrations myself and cleaned them into a final dataset of 158 episodes. I trained ACT through LeRobot's official pipeline with 134 training episodes and 24 held-out episodes, selecting the 18,000-step checkpoint. The policy uses one wrist-mounted camera and robot state.
+
+On the NUC, logged inference took a median **321 ms** across 8,300 completed chunks. The robot needs commands while the next inference is running, so I used an asynchronous worker and an overlapping action queue.
+
+I observed oscillation and overshoot during deployment. I refined execution with chunk blending, an arm filter and empirical controller checks, then tested filtering and sensitivity to scene changes. ACT and its model implementation come from [the ACT authors](https://arxiv.org/abs/2304.13705) and [LeRobot](https://github.com/huggingface/lerobot); my work is the demonstrations, integration, execution refinements and evaluation.
+
+## 4. Results
+
+### Experiments
+
+I evaluated **95 distinct primary trials** in 40-second windows. The study covers five α settings, base shifts of ±2 cm and six cube orientations. Groups contain five or ten trials. **α = 1 is the unfiltered baseline.**
+
+![Three-panel alpha outcome, placement and controller-stop comparison](analysis/2026-11-01/alpha.png)
+
+*Numbers are trial counts. Whiskers show Wilson 95% intervals. Placement includes ranks 4 and 5; return requires rank 5.*
+
+| α | Placement | Placed + returned | Controller stops | Placement median (timed n) |
 | --- | --- | --- | --- | --- |
 | 0.1 | 8/10 | 8/10 | 0/10 | 29.44 s (8) |
 | 0.2 | 7/10 | 7/10 | 0/10 | 19.99 s (7) |
 | 0.5 | 8/10 | 7/10 | 0/10 | 26.25 s (7) |
 | 0.8 | 6/10 | 6/10 | 3/10 | 18.97 s (6) |
-| 1.0 · unfiltered | 6/10 | 6/10 | 3/10 | 28.20 s (6) |
+| 1.0 | 6/10 | 6/10 | 3/10 | 28.20 s (6) |
 
-The lower-alpha groups avoided controller stops. Their success intervals overlap, so this is an exploratory comparison. Timing uses recorded placements only; missing times remain missing.
+The lower-alpha groups avoided controller stops in these trials. The broad intervals leave the best alpha unresolved. Placement times use only existing operator markers; missing measurements stay missing.
 
-**Scene changes were harder.** At α = 0.5, shifting the base 2 cm left gave 2/5 placements and shifting right gave 0/5, versus 8/10 at the original position. Cube rotations of 0°, 10°, 30°, 45°, 60° and 80° gave 8/10, 3/10, 0/10, 0/5, 0/5 and 1/5. The original-position and 0° groups reuse the same ten α = 0.5 trials.
+![Base-position and cube-orientation sensitivity](analysis/2026-11-01/scene_sensitivity.png)
 
-The [full report](docs/RESULTS.md) includes uncertainty intervals, scene comparisons, individual times and six-joint traces. Nine additional base-right attempts and three preliminary tests are accounted for separately. The older 70-trial study uses different scoring and stays separate.
+*At α = 0.5, small scene changes disrupted execution. Origin and 0° reuse the same ten baseline trials.*
 
-[![Three independent recordings at alpha 0.2, 0.5 and 1](assets/alpha_comparison_poster.jpg)](https://lanetang.github.io/mickey17-imitation-learning/media/comparison.html)
+![Flow of the 95 unique primary trials](analysis/2026-11-01/outcome_flow.png)
 
-*[Watch the three-alpha comparison](https://lanetang.github.io/mickey17-imitation-learning/media/comparison.html): original speed, elapsed video time and explicit clip endings. These independent recordings illustrate motion; they are not synchronized scored trials.*
+*Pooled accounting across all conditions. Controller stops remain failures; their completed phases were not ranked.*
 
-## How the system works
+The [full report](docs/RESULTS.md) includes individual times, intervals and failure categories. Nine additional base-right attempts and three preliminary tests are reported separately. The earlier 70-trial study uses different scoring.
 
-![Real-time deployment system](assets/act_realtime_system_minimal_v2.png)
+### Offline validation figure
 
-*Inference runs asynchronously; the queue and controller run at a requested 30 Hz. Logged inference had a median of 321 ms across 8,300 completed chunks.*
+![Held-out episode 151 commands compared with policy predictions](evidence/2026-11-01/heldout_episode_151.png)
 
-ACT predicts 30 actions from a wrist image and robot state. I request another chunk about every 12 control frames. The first inference holds the starting pose. After that, the queue discards already-past entries from each arriving chunk and blends predictions assigned to the same future cycle.
+*Recorded held-out episode 151, using the same checkpoint as deployment. The BC trace is a historical comparator. Recorded-observation prediction does not measure physical task success.*
 
-Scheduling answers **which action belongs to this moment**. The α filter smooths the first five arm commands over time; it leaves the gripper unchanged. Smaller α applies more smoothing. Controller checks bound the resulting targets, while raw proposal checks can stop execution before filtering.
+### Demo review figure
 
-<img src="assets/90dd8d0f4825327d1f420b8074e4b9b9.jpg" width="640" alt="Leader arm, SO-101 follower on LeKiwi, wrist camera and tabletop task">
+![Six-joint trace of the median timed rank-5 alpha-0.5 rollout](analysis/2026-11-01/trajectory_alpha_0_5.png)
 
-*My collection setup: SO-101 leader and follower, LeKiwi base, one wrist camera and an Intel N95 NUC. Deployment uses CPU inference and holds base velocity at zero.*
+*Median timed rank-5 α = 0.5 trial. The dotted line marks placement; the curves separate queued, filtered, echoed and observed values. The [unfiltered controller-stop example](analysis/2026-11-01/trajectory_alpha_1_0.png) is selected by earliest trial ID.*
 
-## What I learned
+## 5. About this System
 
-Offline command prediction was only part of the problem. On hardware I saw oscillation, overshoot and controller stops. Filtering helped make execution usable, but it also changes how quickly the arm responds.
+### Real-time system diagram
 
-Placement exposed another weakness: the wrist view changes as the arm moves, and the gripper can obscure the cube and target. Small changes in base position or cube orientation were enough to disrupt the learned sequence. This made demonstration coverage and camera placement feel as important as model choice.
+![Runtime, chunk scheduling and controller filter](analysis/2026-11-01/system_runtime.png)
 
-My hypothesis is that inference delay contributes to a mismatch between the observed state and the state at execution. These experiments do not isolate that mechanism. The useful lesson was to inspect observations, queued proposals, filtered commands and measured motion together.
+*The worker predicts while queued commands execute. At readiness, past entries of the arriving chunk expire; future entries blend with older predictions.*
 
-## Reproduce and explore
+I request another chunk about every 12 control frames. Queue blending combines predictions for the **same future cycle**. The α filter smooths commands **over time** across the first five arm channels. The gripper bypasses that filter. Raw checks run before filtering, followed by bounded-target checks.
 
-Regenerate the current figures and tables from the included numerical evidence (Python 3.11+):
+### Pipeline flow
+
+![Demonstration collection, training, checkpoint selection and deployment](analysis/2026-11-01/pipeline.png)
+
+*From moving the robot myself to training, held-out review and physical evaluation.*
+
+### Platform, environment and task definition
+
+<img src="assets/90dd8d0f4825327d1f420b8074e4b9b9.jpg" width="900" alt="SO-101 leader and follower, LeKiwi base and tabletop task">
+
+*SO-101 leader–follower setup, wrist camera and LeKiwi base. Deployment uses the NUC CPU and zero base-velocity commands.*
+
+The task progresses through reaching, picking, transporting and placing, followed by return. Rank 4 means placed but not returned; rank 5 includes return. Circle-overlap quality is separate. See my [experiment definition](experiment_statement.md).
+
+## 6. Experiment narrative
+
+Offline predictions looked promising, but physical rollouts exposed problems that recorded observations cannot show. I saw oscillation, overshoot and sensitivity to the scene. The wrist view can also hide the cube and destination during placement.
+
+This was my first demonstration-collection effort, and the data quality and coverage could be better. Labels and placement times are my own observations.
+
+My hypothesis is that inference delay contributes to a mismatch between the observed state and execution state. The current experiments do not isolate that mechanism. Inspecting proposals, commands and measured motion together was more useful than judging the policy from validation loss alone.
+
+## 7. Reproduction guide
+
+Regenerate the figures and tables from the public numerical snapshot with Python 3.11+:
 
 ```bash
 python3 -m pip install -r requirements-analysis.txt
 python3 tools/analyze_outcomes.py --output-dir /tmp/mickey17-analysis
 ```
 
-Start with the [offline reproduction and training guide](docs/REPRODUCE.md), [experiment definition](experiment_statement.md), and [evaluated rollout code](deployment/rollout_act_overlap.py). The report documents manual labeling, small groups and missing measurements. Weights, demonstration videos and the exact NUC environment remain external; figure reproduction works from this checkout.
+The [reproduction guide](docs/REPRODUCE.md) covers the training configuration, offline analysis and hardware dependencies. The evaluated deployment entry point is [rollout_act_overlap.py](deployment/rollout_act_overlap.py).
 
-Next I want to improve demonstration coverage and test image augmentation. [Real-Time Chunking](https://www.pi.website/research/real_time_chunking) and VLA policies are future exploration.
+## 8. Limitations and future expansion
 
-Built on [ACT](https://arxiv.org/abs/2304.13705) and [LeRobot ACT](https://huggingface.co/docs/lerobot/act). [Attribution and licenses](docs/THIRD_PARTY_NOTICES.md) · [source provenance](docs/SOURCE_OF_TRUTH.md) · [my original README](docs/archive/README-author-draft-2026-11-02.md).
+This is an exploratory personal study with small groups, manual labels and limited scene variation. Weights, demonstration videos and the exact NUC environment remain external.
+
+Next I want to improve demonstration coverage, test image and demonstration augmentation, and explore [Real-Time Chunking](https://www.pi.website/research/real_time_chunking) and VLA policies.
+
+## 9. References
+
+[ACT paper](https://arxiv.org/abs/2304.13705) · [LeRobot ACT documentation](https://huggingface.co/docs/lerobot/act) · [Attribution](docs/THIRD_PARTY_NOTICES.md) · [Source provenance](docs/SOURCE_OF_TRUTH.md)
+
+I used Codex to help with code, analysis and presentation. The robot work, observations and editorial choices are mine.

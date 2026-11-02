@@ -26,6 +26,23 @@ def main():
     parser.add_argument("--assets-dir", type=Path, default=Path(__file__).resolve().parents[1] / "assets")
     args = parser.parse_args()
     assets = args.assets_dir
+    landscape_source = assets / "demo_alpha0.5.MOV"
+    landscape_public = assets / "landscape_demo.mp4"
+    subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(landscape_source),
+                    "-map", "0:v:0", "-an", "-vf", "scale=1280:-2", "-c:v", "libx264", "-crf", "23",
+                    "-preset", "medium", "-pix_fmt", "yuv420p", "-map_metadata", "-1",
+                    "-movflags", "+faststart", str(landscape_public)], check=True)
+    # Animated WebP keeps the complete 1x recording compact enough for a README.
+    with tempfile.TemporaryDirectory(prefix="mickey17-preview-") as preview_tmp:
+        preview_tmp = Path(preview_tmp)
+        subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(landscape_public),
+                        "-vf", "fps=10,scale=900:-2:flags=lanczos", str(preview_tmp / "%04d.png")], check=True)
+        frames = []
+        for path in sorted(preview_tmp.glob("*.png")):
+            with Image.open(path) as frame:
+                frames.append(frame.convert("RGB"))
+        frames[0].save(assets / "landscape_demo.webp", save_all=True, append_images=frames[1:],
+                       duration=100, loop=0, quality=65, method=4)
     # Preserve the original camera recording locally; remove metadata from the
     # publication copy without re-encoding video/audio or changing playback.
     hero_source = assets / "showcase_in_alpha_0.5.mp4"
@@ -73,6 +90,7 @@ def main():
                     "-movflags", "+faststart", str(assets / "alpha_comparison.mp4")]
         subprocess.run(command, check=True)
     for source, time, poster in [(hero_public, 9, "hero_poster.jpg"),
+                                 (landscape_public, 12, "landscape_poster.jpg"),
                                  (assets/"alpha_comparison.mp4", 8, "alpha_comparison_poster.jpg")]:
         subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-ss", str(time),
                         "-i", str(source), "-frames:v", "1", "-q:v", "2", str(assets/poster)], check=True)
@@ -84,6 +102,14 @@ def main():
                          "processing": "metadata stripped; video/audio stream copy, original speed",
                          "poster_at_s": 9,
                          "caption": "Supervised successful demonstration; a hand steadies the base."}}
+    manifest["landscape"] = {
+        "file": landscape_public.name, "source": landscape_source.name,
+        "source_sha256": hashlib.sha256(landscape_source.read_bytes()).hexdigest(),
+        "duration_s": float(probe(landscape_source)["format"]["duration"]),
+        "processing": "1280px H.264; original speed; audio and metadata omitted; full field of view",
+        "preview": {"file": "landscape_demo.webp", "fps": 10, "width": 900,
+                    "speed": 1, "poster_at_s": 12},
+    }
     (assets/"media_provenance.json").write_text(json.dumps(manifest, indent=2) + "\n")
 
 

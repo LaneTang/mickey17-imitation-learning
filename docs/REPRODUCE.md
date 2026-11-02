@@ -15,7 +15,7 @@ The default input is `evidence/2026-11-01/outcomes.json`. Outputs are
 No robot libraries are imported. Tests cover ranks 0–5, null/missing labels,
 absent times, controller failures, shared baselines and trace selection.
 
-To regenerate all six PNG/SVG figures, use **Python 3.11+** in an isolated environment:
+To regenerate all ten PNG/SVG figures, use **Python 3.11+** in an isolated environment:
 
 ```bash
 python3 -m venv .venv-analysis
@@ -26,6 +26,11 @@ python3 -m venv .venv-analysis
 Checked figures use NumPy 2.2.6 and Matplotlib 3.11.2 on macOS. Calculations
 use the standard library. Font rendering can vary across systems. No original
 workspace path is needed. Do not install hardware dependencies for this path.
+
+The command additionally generates `scene_sensitivity`, `outcome_flow`,
+`system_runtime` and `pipeline` figures. Vector SVG files retain editable text.
+Outcome-flow widths come from the snapshot; the scheduling example is an
+illustration of the existing implementation, not another measured trial.
 
 If you hold the raw archive, verify the SHA-256 in the
 [evidence notes](../evidence/2026-11-01/README.md) and extract it separately:
@@ -122,7 +127,8 @@ training or deployment-behavior change.
 ## Media
 
 With the original local `assets/demo_alpha0.2.MOV`, `demo_alpha0.5.MOV` and
-`demo_alpha1.MOV`, analysis dependencies and FFmpeg/ffprobe with libx264:
+`demo_alpha1.MOV`, the local `assets/showcase_in_alpha_0.5.mp4`, analysis
+dependencies, Pillow with WebP support and FFmpeg/ffprobe with libx264:
 
 ```bash
 python3 tools/build_showcase_media.py
@@ -138,7 +144,14 @@ metadata. Original videos remain unchanged locally and are excluded from the
 current published tree. Earlier repository commits contained two source videos;
 this update does not rewrite existing Git history.
 
-The two static pages in `media/` provide browser playback via GitHub Pages,
+The landscape α = 0.5 recording supplies the README opening. Its complete MP4
+is resized to 1280 px with the full field of view and original speed; audio
+and metadata are omitted. The inline animated WebP is 900 px wide at 10 fps,
+with 100 ms frame durations. This reduces the frame rate without speeding up
+the motion. Source hashes and transformations are recorded in media provenance.
+The original short, front-view demonstration remains available separately.
+
+The three static pages in `media/` provide browser playback via GitHub Pages,
 which serves MP4 MIME types correctly. GitHub's repository file viewer does
 not play these videos. The pages can also be served locally with Python's
 `http.server`; they require no build system or JavaScript.

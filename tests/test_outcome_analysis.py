@@ -10,6 +10,9 @@ ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location("analysis", ROOT / "tools/analyze_outcomes.py")
 a = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(a)
+figure_spec = importlib.util.spec_from_file_location("showcase_figures", ROOT / "tools/showcase_figures.py")
+sf = importlib.util.module_from_spec(figure_spec)
+figure_spec.loader.exec_module(sf)
 
 
 def trial(rank=0, status="time limit", time=None, missing=False):
@@ -77,6 +80,25 @@ class EvidenceAudit(unittest.TestCase):
         self.assertEqual(self.audit['selected_trajectory_ids'], [
             'act_offset0_overlap_20261030_221026_446645', 'act_offset0_overlap_20261030_222520_624170'])
         self.assertEqual([t['trial_id'] for t in self.data['trajectories']], self.audit['selected_trajectory_ids'])
+
+    def test_flow_conserves_trials_without_guessing_error_phases(self):
+        counts = sf.outcome_flow_counts(self.data)
+        self.assertEqual(counts, {'all': 95, 'normal': 78, 'controller_stops': 17,
+                                 'returned': 40, 'placed_only': 1, 'not_placed': 37, 'other_unknown': 0})
+        self.assertEqual(counts['all'], counts['normal'] + counts['controller_stops'])
+        self.assertEqual(counts['normal'], counts['returned'] + counts['placed_only'] + counts['not_placed'])
+
+    def test_flow_does_not_assign_a_phase_to_controller_stops(self):
+        t = dict(self.data['trials'][0], quality_rank=5, status='error: controller stopped')
+        counts = sf.outcome_flow_counts({'trials': [t]})
+        self.assertEqual(counts['controller_stops'], 1)
+        self.assertEqual(counts['returned'], 0)
+
+    def test_flow_keeps_missing_labels_unknown(self):
+        t = dict(self.data['trials'][0], quality_rank=None, label_missing=True)
+        counts = sf.outcome_flow_counts({'trials': [t]})
+        self.assertEqual(counts['other_unknown'], 1)
+        self.assertEqual(counts['not_placed'], 0)
 
     def test_reject_conflicting_duplicate_raw_folders(self):
         # Real shared-baseline import already checks hashes; simulate corruption.

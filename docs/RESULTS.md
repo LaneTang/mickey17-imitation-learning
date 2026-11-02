@@ -43,9 +43,10 @@ prompt. The [earlier 70-trial analysis](../analysis/2026-10-25) encoded speed in
 
 ![Filtering comparison](../analysis/2026-11-01/alpha.png)
 
-Filled markers show placement; open markers require return too. Error bars
-are two-sided Wilson 95% score intervals. The lower panel counts controller
-errors independently. Every alpha group has ten trials.
+Panel (a) separates placed-and-returned, placed-only and unsuccessful trials;
+numbers inside bands are counts. Panels (b) and (c) show placement and controller
+stop proportions, with two-sided Wilson 95% score intervals. Every alpha group
+has ten trials. Controller stops remain unsuccessful task outcomes.
 
 α = 0.1 and 0.5 each placed 8/10; α = 0.2 placed 7/10. These three groups had
 no controller stops. α = 0.8 and 1 each placed 6/10 and had three stops. At 0.5,
@@ -55,6 +56,12 @@ The intervals overlap widely. These small, sequentially collected groups do
 not identify a universally optimal alpha or isolate a causal effect.
 
 ## Scene sensitivity
+
+![Combined scene-sensitivity comparison](../analysis/2026-11-01/scene_sensitivity.png)
+
+Blue markers show placement and peach markers require return. Whiskers are
+Wilson 95% intervals; columns give placed and controller-stop counts with their
+actual denominators. Asterisks mark the reused ten-trial baseline.
 
 ![Base shifts](../analysis/2026-11-01/base.png)
 
@@ -68,6 +75,17 @@ For 0°, 10°, 30°, 45°, 60° and 80°, placements were 8/10, 3/10, 0/10, 0/5,
 rotation. Zero observed success in a small group is not proof of zero
 underlying success probability. The shared origin/0° baseline is reused only
 as a comparison reference.
+
+## Trial outcome flow
+
+![Pooled flow of the primary trials](../analysis/2026-11-01/outcome_flow.png)
+
+The band widths conserve all 95 distinct primary trials: 78 normal time-limit
+endings plus 17 controller stops. Among normally ended runs, 40 were placed
+and returned, one was placed without return, and 37 did not place. The 17
+controller stops have no phase rank; they remain a separate failed-execution
+branch. All terminal percentages use 95 as denominator. This pooled accounting
+mixes experimental conditions and is not a baseline success estimate.
 
 ## Placement timing
 
