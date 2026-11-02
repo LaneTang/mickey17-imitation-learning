@@ -1,0 +1,8 @@
+:root { color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #263746; background: #fff; }
+body { max-width: 1120px; margin: 40px auto; padding: 0 24px; line-height: 1.6; }
+a { color: #257a86; text-decoration: none; }
+h1 { font-size: clamp(22px, 4vw, 32px); line-height: 1.2; margin: 24px 0 12px; }
+p { max-width: 800px; }
+video { display: block; max-width: 100%; max-height: 72vh; background: #f5f7f8; margin: 24px 0; border-radius: 4px; }
+.hero { width: 340px; }
+.comparison { width: 100%; }

@@ -137,3 +137,8 @@ The public `hero_demo.mp4` copies the original video/audio streams while strippi
 metadata. Original videos remain unchanged locally and are excluded from the
 current published tree. Earlier repository commits contained two source videos;
 this update does not rewrite existing Git history.
+
+The two static pages in `media/` provide browser playback via GitHub Pages,
+which serves MP4 MIME types correctly. GitHub's repository file viewer does
+not play these videos. The pages can also be served locally with Python's
+`http.server`; they require no build system or JavaScript.

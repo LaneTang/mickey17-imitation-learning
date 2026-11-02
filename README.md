@@ -2,9 +2,9 @@
 
 I taught a low-cost robot to pick up a cube and place it at a target circle using **Action Chunking with Transformers (ACT)**. I collected the demonstrations, trained the policy, made it run on a CPU, and tested what happens when I change the controller filter or the scene.
 
-<a href="assets/hero_demo.mp4"><img src="assets/hero_poster.jpg" width="280" alt="Mickey17 grasping the cube — click to watch the successful demonstration"></a>
+<a href="https://lanetang.github.io/mickey17-imitation-learning/media/hero.html"><img src="assets/hero_poster.jpg" width="280" alt="Mickey17 grasping the cube — click to watch the successful demonstration"></a>
 
-**[Watch the demo · MP4, 24 s](assets/hero_demo.mp4)**
+**[Watch the demo · MP4, 24 s](https://lanetang.github.io/mickey17-imitation-learning/media/hero.html)**
 
 *Successful supervised rollout at α = 0.5. A hand steadies the base during this recording.*
 
@@ -42,9 +42,9 @@ The lower-alpha groups avoided controller stops. Their success intervals overlap
 
 The [full report](docs/RESULTS.md) includes uncertainty intervals, scene comparisons, individual times and six-joint traces. Nine additional base-right attempts and three preliminary tests are accounted for separately. The older 70-trial study uses different scoring and stays separate.
 
-[![Three independent recordings at alpha 0.2, 0.5 and 1](assets/alpha_comparison_poster.jpg)](assets/alpha_comparison.mp4)
+[![Three independent recordings at alpha 0.2, 0.5 and 1](assets/alpha_comparison_poster.jpg)](https://lanetang.github.io/mickey17-imitation-learning/media/comparison.html)
 
-*[Watch the three-alpha comparison](assets/alpha_comparison.mp4): original speed, elapsed video time and explicit clip endings. These independent recordings illustrate motion; they are not synchronized scored trials.*
+*[Watch the three-alpha comparison](https://lanetang.github.io/mickey17-imitation-learning/media/comparison.html): original speed, elapsed video time and explicit clip endings. These independent recordings illustrate motion; they are not synchronized scored trials.*
 
 ## How the system works
 
