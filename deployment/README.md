@@ -1,5 +1,11 @@
 # Deployment preflight
 
+> Historical operational notes: paths and several policy variants below belong
+> to earlier experiments. The November 1 showcase evaluates only
+> `rollout_act_overlap.py` with the zero-offset 018000 ACT checkpoint. Start with
+> [current reproduction and configuration](../docs/REPRODUCE.md) for the verified
+> offline workflow and the limits of hardware reproduction.
+
 ## Offline NUC ACT timing profile
 
 The latency-12 ACT variant requires the matching

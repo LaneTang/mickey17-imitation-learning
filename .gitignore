@@ -15,6 +15,7 @@
 
 # Python environments and generated caches
 .venv/
+.venv-analysis/
 venv/
 __pycache__/
 *.py[cod]
@@ -35,3 +36,8 @@ __pycache__/
 
 # The old deployment-bundle manifest is historical, not a current integrity record
 /transfer_manifest.json
+
+# Preserve supplied camera originals locally; publish the compressed comparison.
+/assets/demo_alpha*.MOV
+/assets/IMG_0291.MOV
+/assets/showcase_in_alpha_0.5.mp4

@@ -1,0 +1,72 @@
+{
+  "unique_trials": 107,
+  "folder_memberships": 127,
+  "cohorts": {
+    "primary": 95,
+    "extra_base_right": 9,
+    "preliminary": 3
+  },
+  "primary_label_missing": [],
+  "all_label_missing": [
+    "act_offset0_overlap_20261031_021633_303493",
+    "act_offset0_overlap_20261031_021758_832205",
+    "act_offset0_overlap_20261031_022017_066778",
+    "act_offset0_overlap_20261031_022141_825276",
+    "act_offset0_overlap_20261030_202401_208864"
+  ],
+  "placed_without_time": [
+    "act_offset0_overlap_20261030_221242_908468",
+    "act_offset0_overlap_20261031_005408_764159",
+    "act_offset0_overlap_20261031_015138_801803"
+  ],
+  "shared_baseline_ids": [
+    "act_offset0_overlap_20261030_220623_196134",
+    "act_offset0_overlap_20261030_220734_695561",
+    "act_offset0_overlap_20261030_220842_228703",
+    "act_offset0_overlap_20261030_221026_446645",
+    "act_offset0_overlap_20261030_221128_514341",
+    "act_offset0_overlap_20261030_221242_908468",
+    "act_offset0_overlap_20261030_221350_247996",
+    "act_offset0_overlap_20261030_221504_909899",
+    "act_offset0_overlap_20261030_221609_701620",
+    "act_offset0_overlap_20261030_221728_481123"
+  ],
+  "selected_trajectory_ids": [
+    "act_offset0_overlap_20261030_221026_446645",
+    "act_offset0_overlap_20261030_222520_624170"
+  ],
+  "inference_completed_chunks_n": 8300,
+  "inference_median_ms": 321.248,
+  "primary_controller_errors": {
+    "proposal envelope": 8,
+    "averaged-step limit": 4,
+    "queue exhausted": 5
+  },
+  "supplementary": {
+    "extra_base_right": {
+      "n": 9,
+      "statuses": {
+        "operator Ctrl-C": 4,
+        "started": 4,
+        "error: ACT averaged proposal changed too far in one cycle": 1
+      },
+      "alpha_counts": {
+        "0.2": 5,
+        "1.0": 4
+      },
+      "missing_labels": 4
+    },
+    "preliminary": {
+      "n": 3,
+      "statuses": {
+        "started": 1,
+        "time limit": 1,
+        "operator Ctrl-C": 1
+      },
+      "alpha_counts": {
+        "0.5": 3
+      },
+      "missing_labels": 1
+    }
+  }
+}

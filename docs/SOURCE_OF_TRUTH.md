@@ -1,41 +1,39 @@
 # Source provenance and repository scope
 
-Prepared locally on 2026-10-30. The user-authored root README and Roadmap are preserved verbatim and remain drafts.
+## NUC source snapshot
 
-## Authoritative deployment source
+The downloaded `Mickey17 remote/Code/IL` directory is the authoritative **downloaded source snapshot**. It was compared against the earlier Mac project on 2026-10-30: all 28 eligible files matched after synchronization. This does not verify the current remote NUC filesystem.
 
-The downloaded NUC directory `Mickey17 remote/Code/IL` is the source of truth for source/configuration files it contains. Its contents were compared by SHA-256 with the Mac `lerobot/Atom's/Imitation Learning` project before preparing this standalone repository. All 28 eligible files matched after synchronization. This verifies the downloaded snapshot, not the current remote NUC filesystem.
+`source_provenance.json` preserves the original SHA-256 hashes of the 25 included NUC files. Two old backup scripts and the old transfer manifest were omitted. Original source hashes have not been rewritten to describe subsequent edits. The existing `deployment/rollout_act_overlap.py` includes a later local Space-key timing/label extension, recorded separately in `local_extensions.json`. Its control/scheduling behavior has not been changed by this showcase update.
 
-The standalone copy includes 25 of those files unchanged. Two historical `*.before*` scripts and the old `transfer_manifest.json` are deliberately omitted. That old manifest describes an earlier bundle and contains hashes that no longer represent every current source file. `source_provenance.json` records freshly calculated hashes instead.
-
-The synchronization replaced five existing Mac files and added eight. Previous versions of the five replaced files remain in the original workspace at `analysis/2026-10-30/mac-before-nuc-sync/`, outside this repository. No source file was removed from the original workspace.
-
-The copied empirical limits are exactly the NUC versions. In particular, their proposal-gap thresholds differ from the previous Mac copy. They are not physical joint limits or collision detection. Root and teleoperation default poses are copied reference configurations for the existing robot; they are not universal calibration values.
-
-## Mac-only project material
-
-Training wrappers, dataset preparation code, offline review scripts, the author's README/Roadmap and assets were retained from the Mac project. They were not replaced with an incomplete deployment-only directory. The `collect/` directory is retained Mac code; the separate `demo_collection/` directory contains the NUC collection scripts. Matching relative paths use the NUC version.
-
-`analysis/2026-10-25/` contains the earlier 70-trial analysis, figures and derived JSON snapshot. It does not include the subsequently downloaded cube-position trials or all NUC runtime logs. The analysis script uses original workspace paths and is retained as its original source; it is not yet a portable reproduction command for a fresh standalone checkout. The published snapshot and figures remain available for review.
-
-`ROBOT_SETUP.md` and `IL_PIPELINE.md` are copied into `docs/` as existing workflow context. Other copied operational documents contain historical paths and settings. Their presence does not establish that every command works from this new repository location. No robot operation, model training or dependency installation was performed during repository preparation.
-
-## External dependencies and limits of reproduction
-
-This is project code, not a full LeRobot fork. It imports an installed LeRobot environment along with PyTorch and other existing dependencies. The original Mac checkout is based at LeRobot commit `c364df18c54b670b6450073039aa2cd6024a6855`; the NUC's installed LeRobot commit/environment was not captured by this code download. That Mac commit identifier alone does not reproduce the NUC environment.
-
-`support/configuration_act.py` is the downloaded ACT configuration extension, including the action-label offset. It is a reference copy, not automatically installed into LeRobot. The Mac code also includes project-related LeRobot changes outside this directory; these have not been copied into the standalone project. Exact dependency pinning and a complete portable setup guide remain reproduction work, rather than a verified feature of this first repository snapshot.
-
-Datasets, checkpoint weights, raw rollout logs, transfer archives, caches and backup scripts remain local and are excluded. Original data and checkpoint files were not moved, overwritten or deleted. The author's two videos and diagram assets are included as showcase material. Raw data/model distribution can be decided separately.
-
-## Local integrity check
-
-From the standalone repository root, using Python 3:
+Run:
 
 ```bash
 python3 tools/verify_source_snapshot.py
 ```
 
-This hashes the 25 included NUC-authoritative files and compares them with `source_provenance.json`. It does not import robot libraries, connect to hardware, or write files. After intentionally changing deployment code, update provenance deliberately; otherwise a mismatch should be investigated.
+The verifier reports unchanged NUC files and separately verifies explicitly recorded local extensions. An unexplained mismatch fails. A local-extension hash is not represented as a NUC match.
 
-GitHub publication is pending the user's review of this local repository.
+## Local work and archives
+
+The Mac project supplied collection/training wrappers, review code, assets and documentation beyond the deployment-only NUC download. Matching source paths used the NUC version during synchronization. The five overwritten Mac versions remain in the original workspace's `analysis/2026-10-30/mac-before-nuc-sync/`, outside this repository; original workspace files were not deleted.
+
+The author's starting README and experiment statement are archived verbatim under [docs/archive](archive/README.md), with their starting hashes. The reconciled experiment statement records the author's clarified 0–5 rubric, including rank 4 = placed but not returned. The rollout's historical prompt is documented separately and has not been silently changed.
+
+The current showcase adds a portable evidence importer/analyzer, tests, scientific figures, selected derived trajectories, compressed illustrative media and supporting documentation. These are local extensions, not part of the original NUC source download. Original media are preserved unchanged locally; metadata-stripped/compressed copies are published instead. Two previously tracked source videos are removed from the current Git tree, without deleting local originals or rewriting existing history. Historical analysis is preserved.
+
+## Evidence provenance
+
+The November 1 archive's SHA-256 is `f9bec52554f3706d93810b7e9e6fade4a4783c83b54151df8f5f4fb58c3ad719`. It was verified before a separate extraction. Current [evidence](../evidence/2026-11-01/README.md) and [analysis](../analysis/2026-11-01) describe 95 primary trials and twelve supplementary attempts, deduplicated to 107 unique IDs. Source hashes refer to original files; raw logs, labels, camera images, checkpoints and archives were not edited or moved.
+
+[analysis/2026-10-25](../analysis/2026-10-25) preserves the earlier 70-trial study and its original nonportable script. Its different scoring is not pooled with current results. The portable entry point is `tools/analyze_outcomes.py`; it defaults to public evidence and supports an optional extracted raw directory.
+
+## External dependencies
+
+This repository is project code, not a complete LeRobot fork. It requires an installed LeRobot environment for training and hardware inference. The Mac checkout's base commit is `c364df18c54b670b6450073039aa2cd6024a6855`, with additional local changes outside this directory. The NUC's installed revision/environment was not captured. That Mac commit alone does not reproduce deployment.
+
+`support/configuration_act.py` is a reference ACT configuration extension, not automatically installed. Historical setup and command documents retain old paths. Empirical limits and default poses are specific recorded configurations, not universal calibration or collision detection.
+
+The [reproduction guide](REPRODUCE.md) separates verified offline analysis from unavailable training data/weights and machine-specific deployment. No robot operation, dependency installation on the NUC or training was performed for this update. Upstream notices and the original license copy are preserved; no project-wide license was assigned.
+
+The showcase is published at [LaneTang/mickey17-imitation-learning](https://github.com/LaneTang/mickey17-imitation-learning).

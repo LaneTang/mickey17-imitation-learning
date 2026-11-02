@@ -1,0 +1,11 @@
+{
+  "recorded_on": "2026-11-02",
+  "description": "Existing local post-NUC completion-marker and label extension, preserved during showcase editing.",
+  "files": {
+    "deployment/rollout_act_overlap.py": {
+      "original_nuc_sha256": "fba0da2d5e002d86f403cba9dea44bf28585d273d9d52ed6fc5dfdaa70e5944d",
+      "local_sha256": "9b3eceb55babaad7c0c20d4fb52b2d7c363eb5c27ffbb0077db59d84cbd74996",
+      "change": "Nonblocking Space placement-time marker; quality_rank-only format-3 labels. Historical prompt differs from clarified study rubric; see docs/COMPLETION_LABEL.md."
+    }
+  }
+}

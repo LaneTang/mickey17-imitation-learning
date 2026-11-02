@@ -1,0 +1,33 @@
+{
+  "comparison": {
+    "fps": 30,
+    "speed": 1,
+    "audio": "omitted",
+    "alignment": "independent clip starts",
+    "sources": [
+      {
+        "file": "demo_alpha0.2.MOV",
+        "sha256": "606a2f3f77455f50b783936d10de004908c3f25087811cec02689276021631cb",
+        "duration_s": 24.198333
+      },
+      {
+        "file": "demo_alpha0.5.MOV",
+        "sha256": "995ccf0c4535a39a3fefbd5c80587c21505829d1bd9039680b671c5c77b3fe38",
+        "duration_s": 28.063333
+      },
+      {
+        "file": "demo_alpha1.MOV",
+        "sha256": "741267e2d0303d483f976ad66b76292e0261306f990943a75b615ba4a693f187",
+        "duration_s": 18.465
+      }
+    ]
+  },
+  "hero": {
+    "file": "hero_demo.mp4",
+    "source": "showcase_in_alpha_0.5.mp4",
+    "source_sha256": "74b94427b909b0074db5b41c8cd34c197efb8e4a61086e0be4d15b99200e9ca6",
+    "processing": "metadata stripped; video/audio stream copy, original speed",
+    "poster_at_s": 9,
+    "caption": "Supervised successful demonstration; a hand steadies the base."
+  }
+}

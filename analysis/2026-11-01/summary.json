@@ -1,0 +1,268 @@
+{
+  "alpha/alpha-0.1": {
+    "family": "alpha",
+    "label": "0.1",
+    "n": 10,
+    "placement": 8,
+    "return": 8,
+    "unknown": 0,
+    "placement_wilson95": [
+      0.49016247153664183,
+      0.9433178485456247
+    ],
+    "return_wilson95": [
+      0.49016247153664183,
+      0.9433178485456247
+    ],
+    "controller_errors": 0,
+    "timed_n": 8,
+    "placement_time_median_s": 29.441000000000003
+  },
+  "alpha/alpha-0.2": {
+    "family": "alpha",
+    "label": "0.2",
+    "n": 10,
+    "placement": 7,
+    "return": 7,
+    "unknown": 0,
+    "placement_wilson95": [
+      0.39677814746114537,
+      0.8922087325936989
+    ],
+    "return_wilson95": [
+      0.39677814746114537,
+      0.8922087325936989
+    ],
+    "controller_errors": 0,
+    "timed_n": 7,
+    "placement_time_median_s": 19.987
+  },
+  "alpha/alpha-0.5": {
+    "family": "alpha",
+    "label": "0.5",
+    "n": 10,
+    "placement": 8,
+    "return": 7,
+    "unknown": 0,
+    "placement_wilson95": [
+      0.49016247153664183,
+      0.9433178485456247
+    ],
+    "return_wilson95": [
+      0.39677814746114537,
+      0.8922087325936989
+    ],
+    "controller_errors": 0,
+    "timed_n": 7,
+    "placement_time_median_s": 26.245
+  },
+  "alpha/alpha-0.8": {
+    "family": "alpha",
+    "label": "0.8",
+    "n": 10,
+    "placement": 6,
+    "return": 6,
+    "unknown": 0,
+    "placement_wilson95": [
+      0.31267376973365824,
+      0.8318196702937638
+    ],
+    "return_wilson95": [
+      0.31267376973365824,
+      0.8318196702937638
+    ],
+    "controller_errors": 3,
+    "timed_n": 6,
+    "placement_time_median_s": 18.973
+  },
+  "alpha/alpha-1[baseline]": {
+    "family": "alpha",
+    "label": "1",
+    "n": 10,
+    "placement": 6,
+    "return": 6,
+    "unknown": 0,
+    "placement_wilson95": [
+      0.31267376973365824,
+      0.8318196702937638
+    ],
+    "return_wilson95": [
+      0.31267376973365824,
+      0.8318196702937638
+    ],
+    "controller_errors": 3,
+    "timed_n": 6,
+    "placement_time_median_s": 28.201500000000003
+  },
+  "base/origin[baseline]": {
+    "family": "base",
+    "label": "Origin",
+    "n": 10,
+    "placement": 8,
+    "return": 7,
+    "unknown": 0,
+    "placement_wilson95": [
+      0.49016247153664183,
+      0.9433178485456247
+    ],
+    "return_wilson95": [
+      0.39677814746114537,
+      0.8922087325936989
+    ],
+    "controller_errors": 0,
+    "timed_n": 7,
+    "placement_time_median_s": 26.245
+  },
+  "base/2cm_left": {
+    "family": "base",
+    "label": "2 cm left",
+    "n": 5,
+    "placement": 2,
+    "return": 2,
+    "unknown": 0,
+    "placement_wilson95": [
+      0.11762077423264783,
+      0.769275718723987
+    ],
+    "return_wilson95": [
+      0.11762077423264783,
+      0.769275718723987
+    ],
+    "controller_errors": 2,
+    "timed_n": 2,
+    "placement_time_median_s": 26.262
+  },
+  "base/2cm_right": {
+    "family": "base",
+    "label": "2 cm right",
+    "n": 5,
+    "placement": 0,
+    "return": 0,
+    "unknown": 0,
+    "placement_wilson95": [
+      0.0,
+      0.43448246478317476
+    ],
+    "return_wilson95": [
+      0.0,
+      0.43448246478317476
+    ],
+    "controller_errors": 1,
+    "timed_n": 0,
+    "placement_time_median_s": null
+  },
+  "cube/deg0[baseline]": {
+    "family": "orientation",
+    "label": "0\u00b0",
+    "n": 10,
+    "placement": 8,
+    "return": 7,
+    "unknown": 0,
+    "placement_wilson95": [
+      0.49016247153664183,
+      0.9433178485456247
+    ],
+    "return_wilson95": [
+      0.39677814746114537,
+      0.8922087325936989
+    ],
+    "controller_errors": 0,
+    "timed_n": 7,
+    "placement_time_median_s": 26.245
+  },
+  "cube/deg10": {
+    "family": "orientation",
+    "label": "10\u00b0",
+    "n": 10,
+    "placement": 3,
+    "return": 3,
+    "unknown": 0,
+    "placement_wilson95": [
+      0.10779126740630099,
+      0.6032218525388546
+    ],
+    "return_wilson95": [
+      0.10779126740630099,
+      0.6032218525388546
+    ],
+    "controller_errors": 3,
+    "timed_n": 2,
+    "placement_time_median_s": 15.4585
+  },
+  "cube/deg30": {
+    "family": "orientation",
+    "label": "30\u00b0",
+    "n": 10,
+    "placement": 0,
+    "return": 0,
+    "unknown": 0,
+    "placement_wilson95": [
+      0.0,
+      0.2775327998628892
+    ],
+    "return_wilson95": [
+      0.0,
+      0.2775327998628892
+    ],
+    "controller_errors": 4,
+    "timed_n": 0,
+    "placement_time_median_s": null
+  },
+  "cube/deg45": {
+    "family": "orientation",
+    "label": "45\u00b0",
+    "n": 5,
+    "placement": 0,
+    "return": 0,
+    "unknown": 0,
+    "placement_wilson95": [
+      0.0,
+      0.43448246478317476
+    ],
+    "return_wilson95": [
+      0.0,
+      0.43448246478317476
+    ],
+    "controller_errors": 0,
+    "timed_n": 0,
+    "placement_time_median_s": null
+  },
+  "cube/deg60": {
+    "family": "orientation",
+    "label": "60\u00b0",
+    "n": 5,
+    "placement": 0,
+    "return": 0,
+    "unknown": 0,
+    "placement_wilson95": [
+      0.0,
+      0.43448246478317476
+    ],
+    "return_wilson95": [
+      0.0,
+      0.43448246478317476
+    ],
+    "controller_errors": 1,
+    "timed_n": 0,
+    "placement_time_median_s": null
+  },
+  "cube/deg80": {
+    "family": "orientation",
+    "label": "80\u00b0",
+    "n": 5,
+    "placement": 1,
+    "return": 1,
+    "unknown": 0,
+    "placement_wilson95": [
+      0.03622410863243014,
+      0.6244653702374747
+    ],
+    "return_wilson95": [
+      0.03622410863243014,
+      0.6244653702374747
+    ],
+    "controller_errors": 0,
+    "timed_n": 0,
+    "placement_time_median_s": null
+  }
+}

@@ -1,0 +1,108 @@
+trial_id,cohort,memberships,alpha,status,quality_rank,label_missing,completion_time_s,circle_rating,logged_cycles
+act_offset0_overlap_20261030_234141_253354,primary,alpha/alpha-0.1,0.1,time limit,5,False,38.097,3,1173
+act_offset0_overlap_20261030_234252_404068,primary,alpha/alpha-0.1,0.1,time limit,5,False,29.951,2,1172
+act_offset0_overlap_20261030_234349_552312,primary,alpha/alpha-0.1,0.1,time limit,5,False,24.815,3,1173
+act_offset0_overlap_20261030_234446_605574,primary,alpha/alpha-0.1,0.1,time limit,5,False,24.989,3,1173
+act_offset0_overlap_20261030_234542_981705,primary,alpha/alpha-0.1,0.1,time limit,3,False,,,1172
+act_offset0_overlap_20261030_234658_756244,primary,alpha/alpha-0.1,0.1,time limit,5,False,25.035,2,1172
+act_offset0_overlap_20261030_234805_276304,primary,alpha/alpha-0.1,0.1,time limit,3,False,,,1172
+act_offset0_overlap_20261030_234911_362344,primary,alpha/alpha-0.1,0.1,time limit,5,False,34.603,2,1172
+act_offset0_overlap_20261030_235016_811497,primary,alpha/alpha-0.1,0.1,time limit,5,False,32.315,3,1171
+act_offset0_overlap_20261030_235154_439956,primary,alpha/alpha-0.1,0.1,time limit,5,False,28.931,3,1172
+act_offset0_overlap_20261030_232503_752714,primary,alpha/alpha-0.2,0.2,time limit,5,False,15.758,2,1173
+act_offset0_overlap_20261030_232615_030948,primary,alpha/alpha-0.2,0.2,time limit,5,False,19.987,2,1171
+act_offset0_overlap_20261030_233146_983455,primary,alpha/alpha-0.2,0.2,time limit,5,False,18.665,2,1173
+act_offset0_overlap_20261030_233248_192984,primary,alpha/alpha-0.2,0.2,time limit,3,False,,,1172
+act_offset0_overlap_20261030_233405_621168,primary,alpha/alpha-0.2,0.2,time limit,3,False,,,1172
+act_offset0_overlap_20261030_233516_288128,primary,alpha/alpha-0.2,0.2,time limit,3,False,,,1173
+act_offset0_overlap_20261030_233632_614539,primary,alpha/alpha-0.2,0.2,time limit,5,False,18.544,2,1171
+act_offset0_overlap_20261030_233742_600352,primary,alpha/alpha-0.2,0.2,time limit,5,False,26.482,3,1170
+act_offset0_overlap_20261030_233843_144569,primary,alpha/alpha-0.2,0.2,time limit,5,False,24.701,3,1173
+act_offset0_overlap_20261030_233941_435522,primary,alpha/alpha-0.2,0.2,time limit,5,False,27.984,0,1172
+act_offset0_overlap_20261030_220623_196134,primary,alpha/alpha-0.5;base/origin[baseline];cube/deg0[baseline],0.5,time limit,5,False,21.568,1,1172
+act_offset0_overlap_20261030_220734_695561,primary,alpha/alpha-0.5;base/origin[baseline];cube/deg0[baseline],0.5,time limit,5,False,31.291,2,1172
+act_offset0_overlap_20261030_220842_228703,primary,alpha/alpha-0.5;base/origin[baseline];cube/deg0[baseline],0.5,time limit,1,False,,,1171
+act_offset0_overlap_20261030_221026_446645,primary,alpha/alpha-0.5;base/origin[baseline];cube/deg0[baseline],0.5,time limit,5,False,26.245,3,1173
+act_offset0_overlap_20261030_221128_514341,primary,alpha/alpha-0.5;base/origin[baseline];cube/deg0[baseline],0.5,time limit,5,False,17.656,3,1171
+act_offset0_overlap_20261030_221242_908468,primary,alpha/alpha-0.5;base/origin[baseline];cube/deg0[baseline],0.5,time limit,4,False,,4,1172
+act_offset0_overlap_20261030_221350_247996,primary,alpha/alpha-0.5;base/origin[baseline];cube/deg0[baseline],0.5,time limit,5,False,29.173,3,1172
+act_offset0_overlap_20261030_221504_909899,primary,alpha/alpha-0.5;base/origin[baseline];cube/deg0[baseline],0.5,time limit,5,False,18.86,1,1174
+act_offset0_overlap_20261030_221609_701620,primary,alpha/alpha-0.5;base/origin[baseline];cube/deg0[baseline],0.5,time limit,5,False,27.658,1,1170
+act_offset0_overlap_20261030_221728_481123,primary,alpha/alpha-0.5;base/origin[baseline];cube/deg0[baseline],0.5,time limit,1,False,,,1172
+act_offset0_overlap_20261030_223316_505439,primary,alpha/alpha-0.8,0.8,error: ACT proposal gap on arm_wrist_flex.pos is 31.07; empirical stop threshold is 29.90,,False,,3,1146
+act_offset0_overlap_20261030_223430_006387,primary,alpha/alpha-0.8,0.8,time limit,5,False,23.892,1,1173
+act_offset0_overlap_20261030_223713_126007,primary,alpha/alpha-0.8,0.8,time limit,5,False,17.336,0,1171
+act_offset0_overlap_20261030_224129_596318,primary,alpha/alpha-0.8,0.8,error: ACT proposal gap on arm_shoulder_pan.pos is 26.93; empirical stop threshold is 22.40,,False,,,224
+act_offset0_overlap_20261030_224223_414818,primary,alpha/alpha-0.8,0.8,time limit,5,False,18.377,2,1172
+act_offset0_overlap_20261030_224335_862885,primary,alpha/alpha-0.8,0.8,time limit,3,False,,,1172
+act_offset0_overlap_20261030_225811_325419,primary,alpha/alpha-0.8,0.8,time limit,5,False,20.158,2,1170
+act_offset0_overlap_20261030_225935_882223,primary,alpha/alpha-0.8,0.8,time limit,5,False,16.534,1,1171
+act_offset0_overlap_20261030_230058_144584,primary,alpha/alpha-0.8,0.8,time limit,5,False,19.569,3,1172
+act_offset0_overlap_20261030_230208_736833,primary,alpha/alpha-0.8,0.8,error: ACT averaged proposal changed too far in one cycle,,False,,,54
+act_offset0_overlap_20261030_222004_121935,primary,alpha/alpha-1[baseline],1.0,time limit,5,False,16.378,3,1171
+act_offset0_overlap_20261030_222107_727140,primary,alpha/alpha-1[baseline],1.0,time limit,5,False,29.332,0,1170
+act_offset0_overlap_20261030_222223_465289,primary,alpha/alpha-1[baseline],1.0,time limit,5,False,32.397,3,1174
+act_offset0_overlap_20261030_222324_316161,primary,alpha/alpha-1[baseline],1.0,time limit,1,False,,,1170
+act_offset0_overlap_20261030_222520_624170,primary,alpha/alpha-1[baseline],1.0,error: ACT averaged proposal changed too far in one cycle,,False,,,858
+act_offset0_overlap_20261030_222620_893533,primary,alpha/alpha-1[baseline],1.0,time limit,5,False,19.694,3,1172
+act_offset0_overlap_20261030_222724_005793,primary,alpha/alpha-1[baseline],1.0,time limit,5,False,27.071,0,1172
+act_offset0_overlap_20261030_222832_548601,primary,alpha/alpha-1[baseline],1.0,error: ACT averaged proposal changed too far in one cycle,,False,,3,570
+act_offset0_overlap_20261030_222938_959269,primary,alpha/alpha-1[baseline],1.0,error: ACT averaged proposal changed too far in one cycle,,False,,0,570
+act_offset0_overlap_20261030_223018_564351,primary,alpha/alpha-1[baseline],1.0,time limit,5,False,35.828,4,1171
+act_offset0_overlap_20261031_015540_669246,primary,base/2cm_left,0.5,error: ACT action queue ran dry; stopping,,False,,,392
+act_offset0_overlap_20261031_015639_767091,primary,base/2cm_left,0.5,error: ACT action queue ran dry; stopping,,False,,,235
+act_offset0_overlap_20261031_015853_305053,primary,base/2cm_left,0.5,time limit,5,False,28.854,0,1178
+act_offset0_overlap_20261031_015958_515368,primary,base/2cm_left,0.5,time limit,1,False,,,1171
+act_offset0_overlap_20261031_020122_293402,primary,base/2cm_left,0.5,time limit,5,False,23.67,1,1173
+act_offset0_overlap_20261031_020335_385887,primary,base/2cm_right,0.5,error: ACT action queue ran dry; stopping,,False,,,415
+act_offset0_overlap_20261031_020414_585266,primary,base/2cm_right,0.5,time limit,0,False,,,1178
+act_offset0_overlap_20261031_020525_386524,primary,base/2cm_right,0.5,time limit,0,False,,,1172
+act_offset0_overlap_20261031_020624_599067,primary,base/2cm_right,0.5,time limit,0,False,,,1172
+act_offset0_overlap_20261031_020802_205483,primary,base/2cm_right,0.5,time limit,0,False,,,1171
+act_offset0_overlap_20261031_021448_637846,extra_base_right,base/2cm_right,0.2,operator Ctrl-C,,False,,,265
+act_offset0_overlap_20261031_021530_802112,extra_base_right,base/2cm_right,0.2,operator Ctrl-C,,False,,,426
+act_offset0_overlap_20261031_021603_763439,extra_base_right,base/2cm_right,0.2,operator Ctrl-C,,False,,,329
+act_offset0_overlap_20261031_021633_303493,extra_base_right,base/2cm_right,0.2,started,,True,,,1172
+act_offset0_overlap_20261031_021758_832205,extra_base_right,base/2cm_right,0.2,started,,True,,,866
+act_offset0_overlap_20261031_021853_133442,extra_base_right,base/2cm_right,1.0,operator Ctrl-C,,False,,,585
+act_offset0_overlap_20261031_021954_585885,extra_base_right,base/2cm_right,1.0,error: ACT averaged proposal changed too far in one cycle,,False,,,10
+act_offset0_overlap_20261031_022017_066778,extra_base_right,base/2cm_right,1.0,started,,True,,,1033
+act_offset0_overlap_20261031_022141_825276,extra_base_right,base/2cm_right,1.0,started,,True,,,619
+act_offset0_overlap_20261031_004658_329376,primary,cube/deg10,0.5,error: ACT proposal left the demonstration envelope,,False,,,603
+act_offset0_overlap_20261031_004742_123539,primary,cube/deg10,0.5,time limit,0,False,,,1173
+act_offset0_overlap_20261031_004916_215328,primary,cube/deg10,0.5,time limit,0,False,,,1171
+act_offset0_overlap_20261031_005035_216980,primary,cube/deg10,0.5,time limit,0,False,,,1171
+act_offset0_overlap_20261031_005139_676188,primary,cube/deg10,0.5,error: ACT proposal left the demonstration envelope,,False,,,368
+act_offset0_overlap_20261031_005211_714971,primary,cube/deg10,0.5,time limit,5,False,14.445,2,1173
+act_offset0_overlap_20261031_005408_764159,primary,cube/deg10,0.5,time limit,5,False,,4,1173
+act_offset0_overlap_20261031_010026_606811,primary,cube/deg10,0.5,time limit,5,False,16.472,3,1173
+act_offset0_overlap_20261031_010146_809251,primary,cube/deg10,0.5,error: ACT proposal left the demonstration envelope,,False,,,681
+act_offset0_overlap_20261031_010255_491019,primary,cube/deg10,0.5,time limit,1,False,,,1170
+act_offset0_overlap_20261031_010918_167755,primary,cube/deg30,0.5,time limit,1,False,,,1171
+act_offset0_overlap_20261031_011032_351495,primary,cube/deg30,0.5,time limit,1,False,,,1172
+act_offset0_overlap_20261031_011213_441321,primary,cube/deg30,0.5,error: ACT proposal left the demonstration envelope,,False,,,452
+act_offset0_overlap_20261031_011255_865943,primary,cube/deg30,0.5,error: ACT proposal left the demonstration envelope,,False,,,458
+act_offset0_overlap_20261031_011439_892173,primary,cube/deg30,0.5,error: ACT proposal left the demonstration envelope,,False,,,470
+act_offset0_overlap_20261031_011520_032203,primary,cube/deg30,0.5,time limit,0,False,,,1172
+act_offset0_overlap_20261031_011643_184869,primary,cube/deg30,0.5,time limit,0,False,,,1172
+act_offset0_overlap_20261031_011803_661827,primary,cube/deg30,0.5,time limit,1,False,,,1172
+act_offset0_overlap_20261031_012021_088974,primary,cube/deg30,0.5,time limit,1,False,,,1171
+act_offset0_overlap_20261031_012152_428274,primary,cube/deg30,0.5,error: ACT action queue ran dry; stopping,,False,,,791
+act_offset0_overlap_20261031_012256_528730,primary,cube/deg45,0.5,time limit,1,False,,,1172
+act_offset0_overlap_20261031_012406_482470,primary,cube/deg45,0.5,time limit,1,False,,,1171
+act_offset0_overlap_20261031_012524_804442,primary,cube/deg45,0.5,time limit,1,False,,,1171
+act_offset0_overlap_20261031_012647_339049,primary,cube/deg45,0.5,time limit,1,False,,,1172
+act_offset0_overlap_20261031_012754_925083,primary,cube/deg45,0.5,time limit,1,False,,,1173
+act_offset0_overlap_20261031_013748_396334,primary,cube/deg60,0.5,time limit,0,False,,,1171
+act_offset0_overlap_20261031_014010_539984,primary,cube/deg60,0.5,time limit,0,False,,,1170
+act_offset0_overlap_20261031_014121_878335,primary,cube/deg60,0.5,time limit,0,False,,,1174
+act_offset0_overlap_20261031_014259_841273,primary,cube/deg60,0.5,time limit,0,False,,,1171
+act_offset0_overlap_20261031_014412_449616,primary,cube/deg60,0.5,error: ACT action queue ran dry; stopping,,False,,,654
+act_offset0_overlap_20261031_014502_867059,primary,cube/deg80,0.5,time limit,0,False,,,1179
+act_offset0_overlap_20261031_014621_801260,primary,cube/deg80,0.5,time limit,1,False,,,1173
+act_offset0_overlap_20261031_015037_197817,primary,cube/deg80,0.5,time limit,1,False,,,1172
+act_offset0_overlap_20261031_015138_801803,primary,cube/deg80,0.5,time limit,5,False,,3,1171
+act_offset0_overlap_20261031_015320_100359,primary,cube/deg80,0.5,time limit,1,False,,,1172
+act_offset0_overlap_20261030_202401_208864,preliminary,test,0.5,started,,True,,,1172
+act_offset0_overlap_20261030_202543_960935,preliminary,test,0.5,time limit,,False,,,1172
+act_offset0_overlap_20261030_202642_910881,preliminary,test,0.5,operator Ctrl-C,,False,,,821

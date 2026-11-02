@@ -13,9 +13,13 @@ import argparse
 import csv
 import json
 import math
+import os
+import select
 import statistics
 import sys
+import termios
 import time
+import tty
 from concurrent.futures import Future, ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
@@ -100,25 +104,65 @@ def average_arm_proposal(proposal: np.ndarray, previous: np.ndarray,
     return averaged
 
 
-def save_operator_rating(log_dir: Path, rollout_status: str, cycles: int) -> None:
+class CompletionKey:
+    """Poll Space without blocking control; restore terminal before rating input."""
+
+    def __init__(self, stream=None):
+        self.stream = sys.stdin if stream is None else stream
+        self.fd = None
+        self.saved_terminal = None
+        self.started = None
+        self.seconds = None
+        self.completion_time_s = None
+
+    def start(self, started: float, seconds: float) -> None:
+        self.started = started
+        self.seconds = seconds
+        if self.stream.isatty():
+            self.fd = self.stream.fileno()
+            self.saved_terminal = termios.tcgetattr(self.fd)
+            # cbreak preserves Ctrl-C while allowing Space without Enter.
+            tty.setcbreak(self.fd, termios.TCSANOW)
+
+    def poll(self) -> None:
+        if self.fd is None:
+            return
+        ready, _, _ = select.select([self.fd], [], [], 0)
+        if ready:
+            keys = os.read(self.fd, 4096)
+            elapsed = time.perf_counter() - self.started
+            if (b" " in keys and self.completion_time_s is None
+                    and 0 <= elapsed <= self.seconds):
+                self.completion_time_s = round(elapsed, 3)
+
+    def close(self) -> None:
+        if self.saved_terminal is not None:
+            termios.tcsetattr(self.fd, termios.TCSANOW, self.saved_terminal)
+            self.saved_terminal = None
+        self.fd = None
+
+
+def save_operator_rating(log_dir: Path, rollout_status: str, cycles: int,
+                         completion_time_s: float | None = None) -> None:
     """Ask for a human outcome label after motion and save it beside the logs."""
-    score = None
+    rank = None
     circle_rating = None
     if cycles and sys.stdin.isatty():
-        print("Rate this rollout: 0=no phase completed; 1-4=phases completed "
-              "in order; 5=all four phases completed within 30 s.", flush=True)
-        while True:
+        abnormal = rollout_status != "time limit"
+        print("Quality rank: 1=no phase; 2=reaching; 3=picking; "
+              "4=transporting; 5=placing completed. Speed is recorded separately.", flush=True)
+        if abnormal:
+            print("Abnormal termination: quality_rank=null.", flush=True)
+        while not abnormal:
             try:
-                answer = input("Quality score (0-5, Enter to skip): ").strip()
+                answer = input("Quality rank (1-5): ").strip()
             except (EOFError, KeyboardInterrupt):
                 print("\nRating skipped.", flush=True)
                 break
-            if not answer:
+            if answer in {"1", "2", "3", "4", "5"}:
+                rank = int(answer)
                 break
-            if answer in {"0", "1", "2", "3", "4", "5"}:
-                score = int(answer)
-                break
-            print("Enter a whole number from 0 to 5, or press Enter to skip.", flush=True)
+            print("Enter a whole number from 1 to 5.", flush=True)
         print("Cube in the circle: 0=100% inside; 1=about 95% inside; 2=about 90% inside; "
               "3=about 66% inside; 4=33% inside; 5=0% inside", flush=True)
         while True:
@@ -134,12 +178,10 @@ def save_operator_rating(log_dir: Path, rollout_status: str, cycles: int) -> Non
                 break
             print("Enter a whole number from 0 to 5, or press Enter to skip.", flush=True)
     record = {
-        "format_version": 2,
+        "format_version": 3,
         "source": "operator_after_rollout",
-        "quality_score": score,
-        "score_out_of": 5,
-        "completed_phases": min(score, 4) if score is not None else None,
-        "fast_full_success": score == 5 if score is not None else None,
+        "quality_rank": rank,
+        "completion_time_s": completion_time_s,
         "cube_in_the_circle": {
             "rating": circle_rating,
             "out_of": 5,
@@ -149,7 +191,7 @@ def save_operator_rating(log_dir: Path, rollout_status: str, cycles: int) -> Non
         "rollout_status": rollout_status,
         "logged_cycles": cycles,
         "rated_at_utc": (datetime.now(timezone.utc).isoformat()
-                         if score is not None or circle_rating is not None else None),
+                         if rank is not None or circle_rating is not None else None),
     }
     path = log_dir / "quality_label.json"
     path.write_text(json.dumps(record, indent=2) + "\n")
@@ -229,6 +271,7 @@ def main() -> None:
     cycles = overruns = clipped_cycles = overlap_updates = 0
     inference_ms = []
     stop_reason = "preview only"
+    completion_key = CompletionKey()
     try:
         robot.connect()
         observation = robot.get_observation()
@@ -337,8 +380,12 @@ def main() -> None:
         last_snapshot_s = -float("inf")
         stop_reason = "time limit"
         worker = ThreadPoolExecutor(max_workers=1, thread_name_prefix="act-overlap")
+        print("Press SPACE once when placing is completed; rollout continues. "
+              "Completion time includes initial inference hold.", flush=True)
+        completion_key.start(started, args.seconds)
         while time.perf_counter() - started < args.seconds:
             cycle_started = time.perf_counter()
+            completion_key.poll()
             observation = robot.get_observation()
             state, frame = read_observation(observation)
             act_state = act_state_from_observation(observation, act_channels)
@@ -439,6 +486,10 @@ def main() -> None:
         stop_reason = f"error: {error}"
         raise
     finally:
+        try:
+            completion_key.close()
+        except (OSError, termios.error) as error:
+            print(f"Could not restore terminal: {error}", flush=True)
         if robot.is_connected:
             if sent_any and last_state is not None:
                 try:
@@ -467,7 +518,8 @@ def main() -> None:
                              "overruns": overruns})
             manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
             print(f"Saved ACT log and {len(frames)} wrist frames: {log_dir}", flush=True)
-            save_operator_rating(log_dir, stop_reason, cycles)
+            save_operator_rating(log_dir, stop_reason, cycles,
+                                 completion_key.completion_time_s)
 
 
 if __name__ == "__main__":

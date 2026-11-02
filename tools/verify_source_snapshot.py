@@ -8,17 +8,34 @@ from pathlib import Path
 def main():
     root = Path(__file__).resolve().parents[1]
     manifest = json.loads((root / "source_provenance.json").read_text())
+    extensions = json.loads((root / "local_extensions.json").read_text())["files"]
     errors = []
+    unchanged = extended = 0
     for relative_path, expected_hash in manifest["nuc_files"].items():
         path = root / relative_path
         if not path.is_file():
             errors.append(f"Missing: {relative_path}")
-        elif hashlib.sha256(path.read_bytes()).hexdigest() != expected_hash:
-            errors.append(f"Changed: {relative_path}")
+        else:
+            actual = hashlib.sha256(path.read_bytes()).hexdigest()
+            if actual == expected_hash:
+                unchanged += 1
+            elif relative_path in extensions:
+                extension = extensions[relative_path]
+                if (extension["original_nuc_sha256"] == expected_hash and
+                        extension["local_sha256"] == actual):
+                    extended += 1
+                    print(f"Verified recorded local extension (not NUC bytes): {relative_path}")
+                else:
+                    errors.append(f"Unrecorded local change: {relative_path}")
+            else:
+                errors.append(f"Changed: {relative_path}")
+    for path in extensions:
+        if path not in manifest["nuc_files"]:
+            errors.append(f"Extension has no original NUC entry: {path}")
     if errors:
         print("\n".join(errors))
         raise SystemExit(1)
-    print(f"Verified {len(manifest['nuc_files'])} NUC source/configuration files.")
+    print(f"Verified {unchanged} unchanged NUC files and {extended} recorded local extensions.")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,3 @@
+# Figure reproduction only. Hardware/training environments are separate.
+matplotlib==3.11.2
+numpy==2.2.6
