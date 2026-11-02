@@ -18,7 +18,7 @@ I taught a low-cost robot to pick and place from demonstrations using **ACT**, t
 
 <a href="https://lanetang.github.io/mickey17-imitation-learning/media/comparison.html"><img src="assets/alpha_comparison.gif" width="900" alt="Three independent robot demos, left to right: alpha 0.2, 0.5 and the new alpha 1.0 oscillation example"></a>
 
-*α = 0.2, 0.5 and 1.0, left to right. The right-hand clip shows oscillation at α = 1. Independent demos at original speed; ended clips freeze and are marked. These are illustrative recordings, not synchronized trials.*
+*α = 0.2, 0.5 and 1.0, left to right. Recordings at original speed.*
 
 **[Watch the full comparison](https://lanetang.github.io/mickey17-imitation-learning/media/comparison.html)** · [Single α = 0.5 recording](https://lanetang.github.io/mickey17-imitation-learning/media/landscape.html) · [Another recording, from the front](https://lanetang.github.io/mickey17-imitation-learning/media/hero.html)
 
@@ -26,7 +26,7 @@ I taught a low-cost robot to pick and place from demonstrations using **ACT**, t
 
 The task is simple: "pick up a cube and place it at a circle".
 
-I collected about 200 demonstrations myself and cleaned them into a final dataset of 158 episodes. I trained ACT through LeRobot's official pipeline with 134 training episodes and 24 held-out episodes, selecting the 18,000-step checkpoint. The policy uses one **wrist-mounted camera and robot state**.
+I collected about 200 demonstrations myself and cleaned them into a final dataset of 158 episodes. I trained ACT through LeRobot's official pipeline with 134 training episodes and 24 held-out episodes, selecting the 18,000-step checkpoint. The policy uses one **wrist-mounted camera** and **robot state**.
 
 On the NUC, logged policy inference took a median **321 ms** across 8,300 completed chunks. The robot needs commands while the next inference is running, so I used an asynchronous worker and an overlapping action queue.
 
@@ -56,13 +56,13 @@ I ran **95 distinct trials**, each lasting up to 40 seconds. I tested five α se
 
 ![Individual estimated completion times and medians for five alpha settings](analysis/2026-11-02-completion/alpha_completion.png)
 
-*I estimated these times from gripper motion and the return to the starting pose. Dots show timed runs; bars show medians. These estimates haven’t been checked against video. [How I measured them](docs/AUTOMATIC_COMPLETION_TIME.md).*
+*I estimated these times from gripper motion and the return to the starting pose. Dots show timed runs; bars show medians. [How I measured them](docs/AUTOMATIC_COMPLETION_TIME.md).*
 
 ### Typical failure
 
 <a href="https://lanetang.github.io/mickey17-imitation-learning/media/failures.html"><img src="assets/failure_examples.gif" width="900" alt="Two alpha 1 failure examples: overextension on the left and a proposal-step stop on the right"></a>
 
-*Two α = 1 failures I ran into: overextension on the left, and a proposal-step stop on the right. Independent recordings at original speed, separate from the 95-trial study.*
+*Two α = 1 failures I ran into: overextension on the left, and a proposal-step stop on the right. Recordings at original speed.*
 
 [Watch the full recordings](https://lanetang.github.io/mickey17-imitation-learning/media/failures.html).
 
@@ -144,7 +144,7 @@ This was my first time collecting demos for robot learning. Looking back, I'd in
 
 *SO-101 leader–follower setup, wrist camera and LeKiwi base. Deployment uses the NUC CPU and zero base-velocity commands.*
 
-The task progresses through reaching, picking, transporting and placing, followed by return. Rank 4 means placed but not returned; rank 5 includes return. Circle-overlap quality is separate. See my [experiment definition](experiment_statement.md).
+The task progresses through reaching, picking, transporting and placing, followed by return. More details please see my [experiment definition](experiment_statement.md).
 
 ## 6. Experiment narrative
 
@@ -177,4 +177,4 @@ Possible extensions include more varied demonstrations, image and demonstration 
 
 [ACT paper](https://arxiv.org/abs/2304.13705) · [LeRobot ACT documentation](https://huggingface.co/docs/lerobot/act) · [Attribution](docs/THIRD_PARTY_NOTICES.md) · [Source provenance](docs/SOURCE_OF_TRUTH.md)
 
-I used Codex to help with code, analysis and presentation. The robot work, observations and editorial choices are mine.
+I used Codex to help with code, analysis and presentation. The overall structure, method of pushing research into real, robot work, observations are mine(Codex was always told me to recollect data or redesign the policy, bruhhh).
